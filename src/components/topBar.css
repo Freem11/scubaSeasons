@@ -5,14 +5,12 @@
     justify-content: space-between;
   }
 
-
   .divLeft{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    width: 180px;
-    margin-left: 1%;
+    width: 250px;
+    margin-left: 2%;
   }
 
   .divRight{
@@ -21,26 +19,37 @@
     align-items: center;
     justify-content: space-between;
     width: 300px;
-    margin-right: 2%;
+    margin-right: 3%;
   }
 
   .mantalogo {
-    height: 30px;
+    height: 40px;
     margin-top: -5px;
+    margin-right: 5px;
   }
 
+  .menuIcon {
+    height: 50px;
+    color: white;
+    margin-right: 3%;
+  }
 
   .facebookLogo {
     height: 40px;
+    color: white;
   }
 
   .instagramLogo {
-    margin-top: 2px;
-    height: 44px;
+    height: 40px;
+    color: white;
   }
 
-
   .youtubeLogo {
-    margin-top: 3px;
-    height: 50px;
+    height: 55px;
+    color: white;
+  }
+
+  .emailIcon {
+    height: 45px;
+    color: white;
   }

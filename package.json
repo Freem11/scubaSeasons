@@ -2,7 +2,6 @@
   "name": "scubaseasons",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -11,9 +10,11 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "fs": "^0.0.1-security",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-player": "^2.16.0"
+    "react-player": "^2.16.0",
+    "react-responsive": "^10.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
