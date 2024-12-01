@@ -28,11 +28,34 @@
     margin-right: 5px;
   }
 
+  .menuIconContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3%;
+    background-color: pink;
+  }
+
   .menuIcon {
     height: 50px;
     color: white;
-    margin-right: 3%;
+    cursor: pointer;
+    /* margin-right: 3%; */
   }
+
+  .dropMenu {
+    z-index: 5;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    top: 50;
+    right: 50;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: blue;
+  }
+
+
 
   .facebookLogo {
     height: 40px;
@@ -52,4 +75,5 @@
   .emailIcon {
     height: 45px;
     color: white;
+    cursor: pointer;
   }

@@ -3,7 +3,6 @@ import headlinerVid from "../content/headlinerVideo.mp4";
 import { useMediaQuery } from 'react-responsive';
 
 function VideoPlayer() {
-  const isMobile = useMediaQuery({ query: '(max-width: 880px)' });
   const isDesktop = useMediaQuery({ query: '(min-width: 880px)' });
 
   return (
