@@ -1,5 +1,5 @@
 import Icon, { IconName } from '../../../icons/Icon';
-import './button.css'
+import '../popOver/popOver.css'
 
 export type ButtonProps = {
    hRef:   string
@@ -8,6 +8,7 @@ export type ButtonProps = {
  };
 
 function Button(props: ButtonProps) {
+
     return (
     <a href={props.hRef} target="_blank">
        <Icon name={props.icon} className={props.styles}/>

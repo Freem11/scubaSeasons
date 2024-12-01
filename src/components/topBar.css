@@ -52,28 +52,5 @@
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    background-color: blue;
-  }
-
-
-
-  .facebookLogo {
-    height: 40px;
-    color: white;
-  }
-
-  .instagramLogo {
-    height: 40px;
-    color: white;
-  }
-
-  .youtubeLogo {
-    height: 55px;
-    color: white;
-  }
-
-  .emailIcon {
-    height: 45px;
-    color: white;
-    cursor: pointer;
+    background-color: transparent;
   }
