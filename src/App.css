@@ -2,12 +2,20 @@ body {
   overflow-x: hidden;
 }
 
-
 .container {
   display: grid;
   width: 100vw;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 4;
+}
+
+.boxHeader {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  height: 50px;
+  width: 100vw;
+  /* background-color: antiquewhite; */
 }
 
 .box1 {
