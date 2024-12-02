@@ -142,6 +142,7 @@ body {
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 3;
+    margin-top: 20vh;
   }
 
   .box7 {
