@@ -6,9 +6,9 @@ function VideoPlayer() {
   const isDesktop = useMediaQuery({ query: '(min-width: 880px)' });
 
   return (
-    <div style={{position: 'relative', display: 'flex', alignItems: "center", justifyContent: 'center', marginTop: isDesktop ? '20%' : 0}}>
-      <img src={phoneCase} style={{position: 'absolute', height: '80vh'}}></img>
-      <video src={headlinerVid} style={{ height: '78vh', borderRadius: '4vh'}} autoPlay loop muted playsInline/>
+    <div style={{position: 'relative', display: 'flex', alignItems: "center", justifyContent: 'center', marginTop: isDesktop ? '20%' : '-20%'}}>
+      <img src={phoneCase} style={{position: 'absolute', height: '77vh'}}></img>
+      <video src={headlinerVid} style={{ height: '75vh', borderRadius: '4vh'}} autoPlay loop muted playsInline/>
     </div>
   );
 }

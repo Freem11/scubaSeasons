@@ -1,4 +1,5 @@
 import heroVid from '../content/heroVid2024.mp4';
+import WavyBlock from './reusables/wavyBlock';
 import '../App.css'
 
 function HeroPlayer() {
@@ -8,6 +9,7 @@ function HeroPlayer() {
       <source src={heroVid} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
+    <WavyBlock color='white'/>
   </div>
   );
 }

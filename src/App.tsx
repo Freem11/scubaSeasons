@@ -1,12 +1,14 @@
 import './App.css'
 import './styles/fonts.scss'
 import TopBar from './components/topBar';
-import PopOverMenu  from './components/reusables/popOver/popOver';
 import HeroPlayer from './components/backgroundHero';
 import HeroTagLines from './components/heroTaglines';
 import VideoPlayer from './components/videoPlayer';
 import PopOverContext from './components/contexts/popoverContext';
 import { useState } from 'react';
+import WavyBlock from './components/reusables/wavyBlock';
+import EmilioPage from './components/emilioPage';
+import EmilioScripts from './components/emilioscripts';
 
 function App() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -18,6 +20,7 @@ function App() {
         <TopBar />
         </div>
         <div className='box1'>
+          {/* enitre row 1 */}
         <HeroPlayer />
         </div>
         <div className='box2'>
@@ -27,6 +30,16 @@ function App() {
           <HeroTagLines/>
         </div>
         <div className='box4'>
+          {/* enitre row 2 */}
+        </div>
+        <div className='box5'>
+        <EmilioScripts/>
+        </div>
+        <div className='box6'>
+        <EmilioPage/>
+        </div>
+        <div className='box7'>
+        
         </div>
       </div>
       </PopOverContext.Provider>
