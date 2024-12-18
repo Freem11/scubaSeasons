@@ -6,9 +6,9 @@ import HeroTagLines from './components/heroTaglines';
 import VideoPlayer from './components/videoPlayer';
 import PopOverContext from './components/contexts/popoverContext';
 import { useState } from 'react';
-import WavyBlock from './components/reusables/wavyBlock';
 import EmilioPage from './components/emilioPage';
-import EmilioScripts from './components/emilioscripts';
+import EmilioScripts from './components/emilioScripts';
+
 
 function App() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -41,6 +41,12 @@ function App() {
         <div className='box7'>
         
         </div>
+        <div className='box8'>
+
+        </div>
+        {/* <div className='box9'>
+        <DesktopVersion/>
+        </div> */}
       </div>
       </PopOverContext.Provider>
   )

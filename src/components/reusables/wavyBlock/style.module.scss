@@ -2,6 +2,7 @@
     position: relative;
     overflow: hidden;
     height: 100%;
+    transform: rotateY(180deg);
 
     svg{
         position: absolute;
