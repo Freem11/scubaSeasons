@@ -1,5 +1,5 @@
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .container {
@@ -50,6 +50,9 @@ body {
 
 .box4 {
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
   grid-column-start: 1;
   grid-column-end: 12;
@@ -60,34 +63,76 @@ body {
 .box5 {
   height: 100vh;
   z-index: 3;
+  display: flex;
   justify-content: center;
   /* background-color: pink; */
-  grid-column-start: 2;
-  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 2;
 }
 
 .box6 {
-  height: 20vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
   justify-content: center;
   /* background-color: blue; */
-  grid-column-start: 4;
-  grid-column-end: 4;
+  grid-column-start: 5;
+  grid-column-end: 6;
   grid-row-start: 2;
   grid-row-end: 2;
 }
 
-.box9 {
+.box8 {
+  z-index: 3;
   height: 100vh;
   display: flex;
   justify-content: center;
   background-color: white;
-  grid-column-start: 1;
+  grid-column-start: 2;
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 3;
   margin-top: 0vh;
+}
+
+.box9 {
+  z-index: 3;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  margin-top: 0vh;
+}
+
+.box10 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  grid-column-start: 1;
+  grid-column-end: 12;
+  grid-row-start: 4;
+  grid-row-end: 4;
+}
+
+.box11 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  grid-column-start: 1;
+  grid-column-end: 12;
+  grid-row-start: 5;
+  grid-row-end: 5;
 }
 
 @media (max-width: 880px) {
@@ -130,26 +175,31 @@ body {
   }
 
   .box5 {
-    height: 100vh;
-    /* background-color: pink; */
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 4;
   }
 
   .box6 {
-    height: 100vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* background-color: blue; */
-    grid-column-start: 4;
-    grid-column-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 6;
     grid-row-start: 3;
     grid-row-end: 3;
-    margin-top: 20vh;
+    z-index: 2;
   }
 
   .box7 {
-    height: 100vh;
+    height: 35vh;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -158,25 +208,77 @@ body {
   }
 
   .box8 {
-    height: 20vh;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
-    grid-row-start: 4;
-    grid-row-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 6;
     margin-top: -20vh;
   }
 
   .box9 {
-    height: 100vh;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    margin-top: 0vh;
+  }
+
+  .box10 {
+    height: 50vh;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 4;
     grid-row-end: 4;
-    margin-top: 0vh;
   }
 
+  .box11 {
+    height: 70vh;
+    background-color: white;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 5;
+  }
+
+  .box12 {
+    height: 50vh;
+    background-color: white;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 6;
+  }
+
+}
+
+@media (max-width: 550px) {
+  .box5 {
+    transform: rotate(90deg);
+  }
+
+  .box8 {
+    height: 10vh;
+    transform: rotate(90deg);
+  }
+
+  .box10 {
+    height: 100vh;
+  }
+
+  .box12 {
+    height: 100vh;
+  }
 }
 
 

@@ -25,7 +25,7 @@ function TopBar() {
   <div className='divRight'>
       <Button hRef={'https://www.facebook.com/profile.php?id=61554622375177'} icon={"facebook"} styles={'facebookIcon'}/>
       <Button hRef={'https://www.instagram.com/scuba_seasons'} icon={"instagram"} styles={'instagramIcon'}/>
-      <Button hRef={'https://www.youtube.com/channel/UCAQzYoPicEgztcfT6r9xc6w'} icon={"youtube"} styles={'youtubeIcon'}/>
+      <Button hRef={'https://www.youtube.com/@ScubaSEAsons/videos'} icon={"youtube"} styles={'youtubeIcon'}/>
        <div className="buttonstyler" onClick={() => window.location.href = 'mailto:scubaseasons@gmail.com'}>
        <Icon name="email-send-outline" className='emailIcon'/>
        </div> 

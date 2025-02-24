@@ -6,8 +6,10 @@ import HeroTagLines from './components/heroTaglines';
 import VideoPlayer from './components/videoPlayer';
 import PopOverContext from './components/contexts/popoverContext';
 import { useState } from 'react';
-import EmilioPage from './components/emilioPage';
-import EmilioScripts from './components/emilioScripts';
+import SearchExmaples from './components/searchExamplesPage';
+import SearchScripts from './components/searchScripts';
+import ContributeExmaples from './components/contributeExamplesPage';
+import ContributeScripts from './components/contributeScript';
 
 
 function App() {
@@ -30,23 +32,37 @@ function App() {
           <HeroTagLines/>
         </div>
         <div className='box4'>
-          {/* enitre row 2 */}
+           {/* enitre row 2 */}
         </div>
         <div className='box5'>
-        <EmilioScripts/>
+        <SearchExmaples/>
         </div>
         <div className='box6'>
-        <EmilioPage/>
+        <SearchScripts/>
         </div>
         <div className='box7'>
-        
+           {/* enitre row 3 */}
         </div>
         <div className='box8'>
-
+        <ContributeExmaples/>
         </div>
-        {/* <div className='box9'>
-        <DesktopVersion/>
-        </div> */}
+
+        <div className='box9'>
+        <ContributeScripts/>
+        </div>
+
+        <div className='box10'>
+            {/* enitre row 4 */}
+        </div>
+
+        <div className='box11'>
+            {/* enitre row 5 */}
+        </div>
+
+        <div className='box12'>
+            {/* enitre row 6 */}
+        </div>
+
       </div>
       </PopOverContext.Provider>
   )
