@@ -10,6 +10,8 @@ import SearchExmaples from './components/searchExamplesPage';
 import SearchScripts from './components/searchScripts';
 import ContributeExmaples from './components/contributeExamplesPage';
 import ContributeScripts from './components/contributeScript';
+import BrandExmaples from './components/brandExamplesPage';
+import BrandScripts from './components/brandScript';
 
 
 function App() {
@@ -61,6 +63,22 @@ function App() {
 
         <div className='box12'>
             {/* enitre row 6 */}
+        </div>
+
+        <div className='box13'>
+            <BrandExmaples/>
+        </div>
+
+        <div className='box14'>
+            <BrandScripts/>
+        </div>
+
+        <div className='box15'>
+            {/* enitre row 7 */}
+        </div>
+
+        <div className='box16'>
+            {/* enitre row 8 */}
         </div>
 
       </div>

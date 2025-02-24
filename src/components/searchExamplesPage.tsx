@@ -2,7 +2,7 @@ import './searchExamplesPage.css';
 import PhotoSlider from './reusables/photoSlider';
 import GiantPacificOcto from '../content/screenShots/GiantPacificOctoMap.png';
 import CommonOcto from '../content/screenShots/CommonOctoMap.png';
-import CaribbeanOcto from '../content/screenShots/CaribbieanOctoMap.png';
+import CaribbeanOcto from '../content/screenShots/CaribbeanOctoMap.png';
 
 
 function SearchExmaples() {
