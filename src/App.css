@@ -147,6 +147,18 @@ body {
   grid-row-end: 4;
 }
 
+.box17 {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: blue; */
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 5;
+}
+
 @media (max-width: 880px) {
   
   .box1 {
@@ -313,6 +325,18 @@ body {
     grid-row-start: 8;
     grid-row-end: 8;
   }
+
+  .box17 {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 9;
+    grid-row-end: 9;
+  }
 }
 
 @media (max-width: 550px) {
@@ -336,7 +360,6 @@ body {
   .box13 {
     transform: rotate(90deg);
   }
-
 
 
   .box15 {

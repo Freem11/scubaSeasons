@@ -12,6 +12,7 @@ import ContributeExmaples from './components/contributeExamplesPage';
 import ContributeScripts from './components/contributeScript';
 import BrandExmaples from './components/brandExamplesPage';
 import BrandScripts from './components/brandScript';
+import Footer from './components/footer';
 
 
 function App() {
@@ -80,6 +81,11 @@ function App() {
         <div className='box16'>
             {/* enitre row 8 */}
         </div>
+
+        <div className='box17'>
+           <Footer/>
+        </div>
+    
 
       </div>
       </PopOverContext.Provider>
