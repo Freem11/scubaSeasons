@@ -34,6 +34,7 @@ body {
   grid-row-start: 1;
   grid-row-end: 1;
   margin-top: -8vh;
+  margin-left: 8vw;
 }
 
 .box3 {
@@ -178,6 +179,7 @@ body {
     grid-row-start: 2;
     grid-row-end: 2;
     margin-top: -10vh;
+    margin-left: 0;
   }
   
   .box3 {
