@@ -1,5 +1,5 @@
 import phoneCase from "../content/iPhone14Skin.png";
-import headlinerVid from "../content/headlinerVideo.mp4";
+import headlinerVid from "../content/MobileVideo.mp4";
 import { useMediaQuery } from 'react-responsive';
 
 function VideoPlayer() {
