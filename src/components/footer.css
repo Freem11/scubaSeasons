@@ -13,8 +13,8 @@
     flex-direction: row;
     align-items: center;
     align-self: flex-start;
-    width: 98%;
-    margin-left: 2%;
+    /* width: 98%; */
+    padding-left: 2%;
   }
 
   .rights {
@@ -50,7 +50,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 300px;
+    /* width: 300px; */
     margin-right: 3%;
   }
 
@@ -100,6 +100,15 @@
       align-items: center;
       justify-content: space-evenly;
       margin-left: 0;
+    }
+
+    .divRight{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 50px;
+      margin-right: 3%;
     }
   }
 

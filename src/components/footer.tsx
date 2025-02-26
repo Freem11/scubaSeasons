@@ -40,7 +40,7 @@ function Footer() {
             <Button hRef={'https://play.google.com/store/apps/details?id=com.freem11.divegomobile'} icon={'android'} styles={'androidIcon'}/>
             <Button hRef={'https://apps.apple.com/us/app/divego/id6450968950'} icon={'apple'}  styles={'appleIcon'}/>
             <a href={'https://scubaseasons.netlify.app'} target="_blank">
-               <img src={Manta} style={{height: '75px'}}></img>
+               <img src={Manta} style={{height: '9vh' }}></img>
             </a>
             </div>
             <img src={Emilio} height={200} className='emilio' />

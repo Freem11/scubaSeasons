@@ -1,5 +1,22 @@
-body {
-  /* overflow-x: hidden; */
+/* body {
+  overflow-x: hidden;
+} */
+
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 110vh; /* Full screen height */
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  object-fit: cover; /* Ensures the video covers the entire background */
+  z-index: -1; /* Makes sure the video stays behind the content */
 }
 
 .container {
@@ -23,6 +40,7 @@ body {
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 1;
+  height: 109vh;
 }
 
 .MobilePhone {
@@ -71,6 +89,7 @@ body {
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 2;
+  position: relative;
 }
 
 .SearchScripts {
@@ -83,6 +102,7 @@ body {
   grid-column-end: 6;
   grid-row-start: 2;
   grid-row-end: 2;
+  position: relative;
 }
 
 .ContributeImages {
@@ -160,13 +180,32 @@ body {
   grid-row-end: 5;
 }
 
-@media (max-width: 880px) {
+
+@media (max-width: 1030px) {
   
+  .video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+  }
+  
+  .video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: cover; /* Ensures the video covers the entire background */
+    z-index: -1; /* Makes sure the video stays behind the content */
+  }
+
   .Row1 {
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 1;
+    height: 99vh
   }
   
   .MobilePhone {
@@ -225,7 +264,7 @@ body {
   }
 
   .Row3 {
-    height: 35vh;
+    height: 50vh;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -260,7 +299,7 @@ body {
   }
 
   .Row4 {
-    height: 50vh;
+    height: 70vh;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -269,7 +308,7 @@ body {
   }
 
   .Row5 {
-    height: 70vh;
+    height: 90vh;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -278,7 +317,7 @@ body {
   }
 
   .Row6 {
-    height: 50vh;
+    height: 60vh;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -311,7 +350,7 @@ body {
   }
 
   .Row7 {
-    height: 40vh;
+    height: 55vh;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -320,7 +359,7 @@ body {
   }
 
   .Row8 {
-    height: 50vh;
+    height: 60vh;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -372,23 +411,11 @@ body {
     height: 110vh;
   }
 
+  .boxFooter {
+    height: 50vh;
+  }
 }
 
 
 
-.video-background {
-  position: relative;
-  width: 100%;
-  height: 110vh; /* Full screen height */
-  overflow: hidden;
-}
 
-.video-background video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 110%;
-  object-fit: cover; /* Ensures the video covers the entire background */
-  z-index: -1; /* Makes sure the video stays behind the content */
-}

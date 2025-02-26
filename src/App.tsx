@@ -53,7 +53,7 @@ function App() {
         <div className='HeroScripts'>
           <HeroTagLines/>
         </div>
-       
+     
         <div className='SearchImages'>
         <SearchExmaples/>
         </div>
