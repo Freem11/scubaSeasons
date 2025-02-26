@@ -14,18 +14,18 @@ body {
   position: absolute;
   top: 0;
   height: 50px;
-  width: 100vw;
+  width: 98vw;
   /* background-color: antiquewhite; */
 }
 
-.box1 {
+.Row1 {
   grid-column-start: 1;
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 1;
 }
 
-.box2 {
+.MobilePhone {
   display: flex;
   justify-content: center;
   /* background-color: orange; */
@@ -37,7 +37,7 @@ body {
   margin-left: 8vw;
 }
 
-.box3 {
+.HeroScripts {
   z-index: 2;
   display: flex;
   justify-content: center;
@@ -49,7 +49,7 @@ body {
   margin-top: -8vh;
 }
 
-.box4 {
+.Row2 {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -61,7 +61,7 @@ body {
   grid-row-end: 2;
 }
 
-.box5 {
+.SearchImages {
   height: 100vh;
   z-index: 3;
   display: flex;
@@ -73,7 +73,7 @@ body {
   grid-row-end: 2;
 }
 
-.box6 {
+.SearchScripts {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -85,7 +85,7 @@ body {
   grid-row-end: 2;
 }
 
-.box8 {
+.ContributeImages {
   z-index: 3;
   height: 100vh;
   display: flex;
@@ -98,7 +98,7 @@ body {
   margin-top: 0vh;
 }
 
-.box9 {
+.ContributeScripts {
   z-index: 3;
   height: 100vh;
   display: flex;
@@ -112,7 +112,7 @@ body {
   margin-top: 0vh;
 }
 
-.box10 {
+.Row4 {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -124,7 +124,7 @@ body {
   grid-row-end: 4;
 }
 
-.box13 {
+.BrandImages {
   height: 100vh;
   z-index: 3;
   display: flex;
@@ -136,7 +136,7 @@ body {
   grid-row-end: 4;
 }
 
-.box14 {
+.BrandScripts {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -148,7 +148,7 @@ body {
   grid-row-end: 4;
 }
 
-.box17 {
+.boxFooter {
   height: 40vh;
   display: flex;
   align-items: center;
@@ -162,14 +162,14 @@ body {
 
 @media (max-width: 880px) {
   
-  .box1 {
+  .Row1 {
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 1;
   }
   
-  .box2 {
+  .MobilePhone {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,7 +182,7 @@ body {
     margin-left: 0;
   }
   
-  .box3 {
+  .HeroScripts {
     display: flex;
     /* background-color: lightblue; */
     grid-column-start: 2;
@@ -192,7 +192,7 @@ body {
     margin-top: 0vh;
   }
   
-  .box4 {
+  .Row2 {
     /* background-color: purple; */
     grid-column-start: 1;
     grid-column-end: 6;
@@ -200,7 +200,7 @@ body {
     grid-row-end: 2;
   }
 
-  .box5 {
+  .SearchImages {
     height: 30vh;
     display: flex;
     align-items: center;
@@ -211,7 +211,7 @@ body {
     grid-row-end: 4;
   }
 
-  .box6 {
+  .SearchScripts {
     height: 10vh;
     display: flex;
     align-items: center;
@@ -224,7 +224,7 @@ body {
     z-index: 2;
   }
 
-  .box7 {
+  .Row3 {
     height: 35vh;
     background-color: white;
     grid-column-start: 1;
@@ -233,7 +233,7 @@ body {
     grid-row-end: 3;
   }
 
-  .box8 {
+  .ContributeImages {
     height: 30vh;
     display: flex;
     align-items: center;
@@ -246,7 +246,7 @@ body {
     margin-top: -20vh;
   }
 
-  .box9 {
+  .ContributeScripts {
     height: 30vh;
     display: flex;
     align-items: center;
@@ -259,7 +259,7 @@ body {
     margin-top: 0vh;
   }
 
-  .box10 {
+  .Row4 {
     height: 50vh;
     background-color: white;
     grid-column-start: 1;
@@ -268,7 +268,7 @@ body {
     grid-row-end: 4;
   }
 
-  .box11 {
+  .Row5 {
     height: 70vh;
     background-color: white;
     grid-column-start: 1;
@@ -277,7 +277,7 @@ body {
     grid-row-end: 5;
   }
 
-  .box12 {
+  .Row6 {
     height: 50vh;
     background-color: white;
     grid-column-start: 1;
@@ -286,7 +286,7 @@ body {
     grid-row-end: 6;
   }
   
-  .box13 {
+  .BrandImages {
     height: 30vh;
     display: flex;
     align-items: center;
@@ -297,7 +297,7 @@ body {
     grid-row-end: 8;
   }
 
-  .box14 {
+  .BrandScripts {
     height: 0vh;
     display: flex;
     align-items: center;
@@ -310,7 +310,7 @@ body {
     z-index: 2;
   }
 
-  .box15 {
+  .Row7 {
     height: 40vh;
     background-color: white;
     grid-column-start: 1;
@@ -319,7 +319,7 @@ body {
     grid-row-end: 7;
   }
 
-  .box16 {
+  .Row8 {
     height: 50vh;
     background-color: white;
     grid-column-start: 1;
@@ -328,7 +328,7 @@ body {
     grid-row-end: 8;
   }
 
-  .box17 {
+  .boxFooter {
     height: 40vh;
     display: flex;
     align-items: center;
@@ -342,35 +342,36 @@ body {
 }
 
 @media (max-width: 550px) {
-  .box5 {
+  .SearchImages {
     transform: rotate(90deg);
   }
 
-  .box8 {
+  .ContributeImages {
     height: 10vh;
     transform: rotate(90deg);
   }
 
-  .box10 {
+  .Row4 {
     height: 100vh;
   }
 
-  .box12 {
+  .Row6 {
     height: 80vh;
   }
 
-  .box13 {
+  .BrandImages {
     transform: rotate(90deg);
   }
 
 
-  .box15 {
+  .Row7 {
     height: 30vh;
   }
 
-  .box16 {
-    height: 100vh;
+  .Row8 {
+    height: 110vh;
   }
+
 }
 
 

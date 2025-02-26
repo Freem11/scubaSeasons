@@ -9,8 +9,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 250px;
-    margin-left: 2%;
+    margin-left: 3%;
   }
 
   .divRight{
@@ -18,8 +17,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 300px;
-    margin-right: 3%;
   }
 
   .mantalogo {

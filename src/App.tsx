@@ -24,68 +24,56 @@ function App() {
         <div className='boxHeader'>
         <TopBar />
         </div>
-        <div className='box1'>
-          {/* enitre row 1 */}
+        <div className='Row1'>
         <HeroPlayer />
         </div>
-        <div className='box2'>
-          <VideoPlayer/>
+        <div className='Row2'>
         </div>
-        <div className='box3'>
-          <HeroTagLines/>
+        <div className='Row3'>
         </div>
-        <div className='box4'>
-           {/* enitre row 2 */}
+        <div className='Row4'>
         </div>
-        <div className='box5'>
-        <SearchExmaples/>
+        <div className='Row5'>
         </div>
-        <div className='box6'>
-        <SearchScripts/>
+        <div className='Row6'>
         </div>
-        <div className='box7'>
-           {/* enitre row 3 */}
+        <div className='Row7'>
         </div>
-        <div className='box8'>
-        <ContributeExmaples/>
+        <div className='Row8'>
+        </div>
+        <div className='Row9'>
+        </div>
+        <div className='boxFooter'>
+           <Footer/>
         </div>
 
-        <div className='box9'>
+        <div className='MobilePhone'>
+          <VideoPlayer/>
+        </div>
+        <div className='HeroScripts'>
+          <HeroTagLines/>
+        </div>
+       
+        <div className='SearchImages'>
+        <SearchExmaples/>
+        </div>
+        <div className='SearchScripts'>
+        <SearchScripts/>
+        </div>
+    
+        <div className='ContributeImages'>
+        <ContributeExmaples/>
+        </div>
+        <div className='ContributeScripts'>
         <ContributeScripts/>
         </div>
 
-        <div className='box10'>
-            {/* enitre row 4 */}
-        </div>
-
-        <div className='box11'>
-            {/* enitre row 5 */}
-        </div>
-
-        <div className='box12'>
-            {/* enitre row 6 */}
-        </div>
-
-        <div className='box13'>
+        <div className='BrandImages'>
             <BrandExmaples/>
         </div>
-
-        <div className='box14'>
+        <div className='BrandScripts'>
             <BrandScripts/>
         </div>
-
-        <div className='box15'>
-            {/* enitre row 7 */}
-        </div>
-
-        <div className='box16'>
-            {/* enitre row 8 */}
-        </div>
-
-        <div className='box17'>
-           <Footer/>
-        </div>
-    
 
       </div>
       </PopOverContext.Provider>
