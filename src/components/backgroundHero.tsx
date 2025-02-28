@@ -5,8 +5,9 @@ import '../App.css'
 function HeroPlayer() {
   return (
     <div className="video-background">
-    <video autoPlay={true} loop={true} muted={true} controls={false}>
+    <video src={heroVid} autoPlay loop muted playsInline preload="auto">
       <source src={heroVid} type="video/mp4" />
+      <source src={heroVid} type="video/webm"/>
       Your browser does not support the video tag.
     </video>
     <WavyBlock color='white'/>
