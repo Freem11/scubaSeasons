@@ -2,6 +2,7 @@ import './App.css'
 import './styles/fonts.scss'
 import TopBar from './components/topBar';
 import HeroPlayer from './components/backgroundHero';
+import BodyBackground from './components/backgroundBody';
 import HeroTagLines from './components/heroTaglines';
 import VideoPlayer from './components/videoPlayer';
 import PopOverContext from './components/contexts/popoverContext';
@@ -28,10 +29,13 @@ function App() {
         <HeroPlayer />
         </div>
         <div className='Row2'>
+          <BodyBackground />
         </div>
         <div className='Row3'>
+        <BodyBackground />
         </div>
         <div className='Row4'>
+        <BodyBackground />
         </div>
         <div className='Row5'>
         </div>
