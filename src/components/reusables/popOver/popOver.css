@@ -52,7 +52,7 @@
   color: lightgray;
 }
 
-@media (max-width: 880px) {
+@media (orientation: portrait) {
   .youtubeIcon {
     height: 50px;
     color: white;

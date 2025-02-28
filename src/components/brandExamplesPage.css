@@ -1,3 +1,10 @@
+.sizingBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55vw
+}
+
 .container {
     height: auto;
     width: 100%;
@@ -19,17 +26,9 @@
   }
 
 
-  @media (max-width: 550px) {
+  @media (orientation: portrait) {
 
-    .centerPage {
-        margin: 0 auto;
-        width: 100%;
-        min-width: 870%;
-        height: 100%;
-      }
-      
-    .picStyles {
-        height: 90vw;
-        width: auto;
-      }
+    .sizingBox {
+      width: 90vw
+    }
   }

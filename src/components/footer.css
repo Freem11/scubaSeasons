@@ -1,6 +1,6 @@
 .footerContainer {
     width: 100%;
-    height: 120%;
+    /* height: 120%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,7 +87,7 @@
     background-color: transparent;
   }
 
-  @media (max-width: 880px) {
+  @media (orientation: portrait) {
 
     .cta {
       width: 80vw;
@@ -112,7 +112,7 @@
     }
   }
 
-
+/* 
   @media (max-width: 550px) {
 
     .cta {
@@ -126,4 +126,4 @@
       width: 100%;
       margin-left: 8%;
     }
-  }
+  } */

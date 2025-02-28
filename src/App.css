@@ -1,6 +1,7 @@
-/* body {
-  overflow-x: hidden;
-} */
+body {
+  /* overflow-x: hidden; */
+  background-color: #0073E6;
+}
 
 .video-background {
   position: relative;
@@ -22,7 +23,7 @@
 .container {
   display: grid;
   width: 100vw;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 20% 20% 20% 20% 20%; 
   grid-template-rows: 4;
 }
 
@@ -46,13 +47,14 @@
 .MobilePhone {
   display: flex;
   justify-content: center;
+  align-items: center;
   /* background-color: orange; */
   grid-column-start: 4;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 1;
-  margin-top: -8vh;
-  margin-left: 8vw;
+  margin-top:  -20%;
+  /* margin-left: 8vw; */ */
 }
 
 .HeroScripts {
@@ -64,105 +66,117 @@
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 1;
-  margin-top: -8vh;
+  margin-top: -20%;
 }
 
 .Row2 {
-  height: 100vh;
+  height: 70vw;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   grid-column-start: 1;
-  grid-column-end: 12;
+  grid-column-end: 7;
   grid-row-start: 2;
   grid-row-end: 2;
 }
 
 .SearchImages {
-  height: 100vh;
+  height: 70vw;
   z-index: 3;
   display: flex;
   justify-content: center;
   /* background-color: pink; */
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 2;
   position: relative;
 }
 
 .SearchScripts {
-  height: 100vh;
+  height: 70vw;
   display: flex;
   align-items: center;
   justify-content: center;
   /* background-color: blue; */
-  grid-column-start: 5;
+  grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 2;
   grid-row-end: 2;
   position: relative;
 }
 
-.ContributeImages {
-  z-index: 3;
-  height: 100vh;
+
+.Row3 {
+  height: 70vw;
   display: flex;
+  align-items: center;
   justify-content: center;
   background-color: white;
-  grid-column-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+.ContributeImages {
+  height: 70vw;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  /* background-color: pink; */
+  grid-column-start: 3;
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 3;
-  margin-top: 0vh;
+  position: relative;
 }
 
 .ContributeScripts {
-  z-index: 3;
-  height: 100vh;
+  height: 70vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  /* background-color: blue; */
   grid-column-start: 1;
-  grid-column-end: 1;
+  grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 3;
-  margin-top: 0vh;
+  position: relative;
 }
 
 .Row4 {
-  height: 100vh;
+  height: 70vw;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   grid-column-start: 1;
-  grid-column-end: 12;
+  grid-column-end: 7;
   grid-row-start: 4;
   grid-row-end: 4;
 }
 
 .BrandImages {
-  height: 100vh;
+  height: 70vw;
   z-index: 3;
   display: flex;
   justify-content: center;
   /* background-color: pink; */
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 4;
   grid-row-start: 4;
   grid-row-end: 4;
 }
 
 .BrandScripts {
-  height: 100vh;
+  height: 70vw;
   display: flex;
   align-items: center;
   justify-content: center;
   /* background-color: blue; */
-  grid-column-start: 5;
+  grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 4;
   grid-row-end: 4;
@@ -181,7 +195,7 @@
 }
 
 
-@media (max-width: 1030px) {
+@media (orientation: portrait) {
   
   .video-background {
     position: relative;
@@ -217,7 +231,7 @@
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 2;
-    margin-top: -10vh;
+    margin-top: -5vh;
     margin-left: 0;
   }
   
@@ -228,11 +242,12 @@
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 1;
-    margin-top: 0vh;
+    margin-top: -20%;
   }
   
   .Row2 {
     /* background-color: purple; */
+    height: 110vh;
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 2;
@@ -264,7 +279,7 @@
   }
 
   .Row3 {
-    height: 50vh;
+    height: 40vw;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -299,7 +314,7 @@
   }
 
   .Row4 {
-    height: 70vh;
+    height: 60vw;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -308,7 +323,7 @@
   }
 
   .Row5 {
-    height: 90vh;
+    height: 90vw;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -317,7 +332,7 @@
   }
 
   .Row6 {
-    height: 60vh;
+    height: 40vw;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -326,7 +341,7 @@
   }
   
   .BrandImages {
-    height: 30vh;
+    height: 0vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -350,7 +365,7 @@
   }
 
   .Row7 {
-    height: 55vh;
+    height: 60vw;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -359,7 +374,7 @@
   }
 
   .Row8 {
-    height: 60vh;
+    height:30vh;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -380,7 +395,7 @@
   }
 }
 
-@media (max-width: 550px) {
+/* @media (max-width: 550px) {
   .SearchImages {
     transform: rotate(90deg);
   }
@@ -416,6 +431,6 @@
   }
 }
 
-
+ */
 
 

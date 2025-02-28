@@ -6,7 +6,7 @@ import UserProfile from '../content/screenShots/UserProfile.png';
 
 function BrandExmaples() {
   return (
-    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+    <div className='sizingBox'>
       <div className='container'>
         <div className='centerPage'>
         <PhotoSlider

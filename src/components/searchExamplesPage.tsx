@@ -7,7 +7,7 @@ import CaribbeanOcto from '../content/screenShots/CaribbeanOctoMap.png';
 
 function SearchExmaples() {
   return (
-    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+    <div className='sizingBox'>
       <div className='container'>
         <div className='centerPage'>
         <PhotoSlider
