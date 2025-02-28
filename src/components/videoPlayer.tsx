@@ -10,6 +10,7 @@ function VideoPlayer() {
       <img src={phoneCase} style={{position: 'absolute', height: '77vh'}}></img>
       <video style={{ height: '75vh', borderRadius: '4vh'}} autoPlay loop muted playsInline preload="auto">
         <source src={headlinerVid} type="video/mp4"/>
+        <source src={headlinerVid} type="video/webm"/>
         </video>
     </div>
   );
