@@ -8,7 +8,8 @@ function VideoPlayer() {
   return (
     <div style={{position: 'relative', display: 'flex', alignItems: "center", justifyContent: 'center', marginTop: isDesktop ? '20%' : '-20%'}}>
       <img src={phoneCase} style={{position: 'absolute', height: '77vh'}}></img>
-      <video src={headlinerVid} style={{ height: '75vh', borderRadius: '4vh'}} autoPlay loop muted playsInline/>
+      <video src={headlinerVid} style={{ height: '75vh', borderRadius: '4vh'}} autoPlay loop muted playsInline preload="auto"
+      />
     </div>
   );
 }
