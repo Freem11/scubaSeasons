@@ -9,7 +9,7 @@ import './heroTaglines.css';
 
 function HeroTagLines() {
   const isMobile = useMediaQuery({ query: '(max-width: 880px)' });
-  const isDesktop = useMediaQuery({ query: '(min-width: 880px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 881px)' });
 
   return (
     <div style={{ display: 'flex', flexDirection: "column", textAlign: 'center', justifyContent: 'center', alignItems: 'center' }}>

@@ -10,7 +10,7 @@ import Emilio from '../content/EmilioNew.png';
 
 function Footer() {
   const isMobile = useMediaQuery({ query: '(max-width: 880px)' });
-  const isDesktop = useMediaQuery({ query: '(min-width: 880px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 881px)' });
 
   return (
     <div className="footerContainer">
