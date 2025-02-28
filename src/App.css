@@ -28,6 +28,16 @@ body {
   background-color: white;
 }
 
+.body-background-Cond {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+  background-color: white;
+}
+
+
 .container {
   display: grid;
   width: 100vw;
@@ -105,6 +115,7 @@ body {
 
 .SearchScripts {
   /* height: 70vw; */
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,7 +146,7 @@ body {
   display: flex;
   justify-content: center;
   /* background-color: pink; */
-  grid-column-start: 3;
+  grid-column-start: 2;
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 3;
@@ -144,12 +155,13 @@ body {
 
 .ContributeScripts {
   /* height: 70vw; */
+  /* width: 50%; */
   display: flex;
   align-items: center;
   justify-content: center;
   /* background-color: blue; */
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 2;
   grid-row-start: 3;
   grid-row-end: 3;
   position: relative;
@@ -181,6 +193,7 @@ body {
 
 .BrandScripts {
   /* height: 70vw; */
+  width: 50%;
   z-index: 3;
   display: flex;
   align-items: center;
@@ -223,6 +236,15 @@ body {
     height: 110%;
     object-fit: cover; /* Ensures the video covers the entire background */
     z-index: -1; /* Makes sure the video stays behind the content */
+  }
+
+  .body-background-Cond {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+    background-color: white;
   }
 
   .Row1 {
@@ -281,6 +303,7 @@ body {
 
   .SearchScripts {
     height: 10vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -293,7 +316,7 @@ body {
   }
 
   .Row3 {
-    height: 33vw;
+    height: 50vw;
     padding-top: 0%;
     padding-bottom: 0%;
     background-color: white;
@@ -341,7 +364,7 @@ body {
   }
 
   .Row5 {
-    height: 80vw;
+    height: 140vw;
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -371,6 +394,7 @@ body {
 
   .BrandScripts {
     /* height: 0vh; */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -14,6 +14,7 @@ import ContributeScripts from './components/contributeScript';
 import BrandExmaples from './components/brandExamplesPage';
 import BrandScripts from './components/brandScript';
 import Footer from './components/footer';
+import BodyBackgroundConditional from './components/backgroundBodyConditional';
 
 
 function App() {
@@ -38,8 +39,10 @@ function App() {
         <BodyBackground />
         </div>
         <div className='Row5'>
+          <BodyBackgroundConditional/>
         </div>
         <div className='Row6'>
+        <BodyBackgroundConditional/>
         </div>
         <div className='Row7'>
         </div>

@@ -6,8 +6,8 @@ import Button from './reusables/button/button';
 import PopOverMenu from './reusables/popOver/popOver';
 
 function TopBar() {
-  const isMobile = useMediaQuery({ query: '(max-width: 880px)' });
-  const isDesktop = useMediaQuery({ query: '(min-width: 880px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 1000px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1000px)' });
 
   return (
     <div className="bodyContainer">
