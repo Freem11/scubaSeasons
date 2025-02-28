@@ -72,8 +72,8 @@ body {
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 1;
-  margin-top:  -20%;
-  /* margin-left: 8vw; */
+  margin-top:  -5%;
+  margin-left: 10vw;
 }
 
 .HeroScripts {
