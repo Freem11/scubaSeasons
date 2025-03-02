@@ -1,8 +1,9 @@
-import heroVid from '../content/HeroVideo2025.mp4';
 import WavyBlock from './reusables/wavyBlock';
 import '../App.css'
 
 function HeroPlayer() {
+
+  const heroVid = 'https://storage.googleapis.com/scubaseasonsvideos/HeroVideo2025.mp4'
   return (
     <div className="video-background">
     <video src={heroVid} autoPlay loop muted playsInline preload="auto">
