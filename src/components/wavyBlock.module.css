@@ -1,0 +1,8 @@
+.wavyBlock {
+  position: absolute;
+  z-index: 1;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  transform: scaleX(-1); /* Flip the wave */
+}

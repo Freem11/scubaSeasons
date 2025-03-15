@@ -1,0 +1,92 @@
+.hero {
+  padding-top: 4rem;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroBlock {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 8rem 4rem;
+  max-width: 70rem;
+  gap: 2rem;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.heroHeading {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.heroHeading h1 {
+  max-width: 32rem;
+}
+
+.heroHeading p {
+  font-size: 20px;
+}
+
+.heroCTAs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    justify-content: start;
+    padding-top: 4rem;
+    height: auto;
+  }
+  .heroBlock {
+    grid-template-columns: 1fr;
+    padding: 4rem;
+    text-align: center;
+  }
+  .heroContent {
+    align-items: center;
+    text-align: center;
+  }
+  .heroHeading {
+    align-items: center;
+  }
+  .heroHeading p {
+    font-size: 16px;
+  }
+  .heroCTAs {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .heroBlock {
+    padding: 4rem 2rem;
+  }
+}

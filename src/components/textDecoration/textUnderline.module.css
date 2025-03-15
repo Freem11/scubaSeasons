@@ -1,0 +1,7 @@
+.textUnderline {
+  background-image: url(../../assets/line.svg);
+  background-position: 30% 90%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 0.2rem;
+}

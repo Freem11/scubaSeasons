@@ -1,60 +1,65 @@
-import './footer.css'
-import Manta from "../content/Matt_Manta_White.png";
-import applelogo from "../content/AppleCTA.png";
-import googlelogo from "../content/GoogleCTA.png";
-import scubaseasonslogo from "../content/MantaCTA.png";
-import { useMediaQuery } from 'react-responsive';
-import Button from './reusables/button/button';
-import CTAButton from './reusables/callToActionButton/CTAButton';
-import Emilio from '../content/EmilioNew.png';
+import Logo from "./logo";
+import styles from "./footer.module.css";
+import DownloadBadge from "./downloadBadge";
+import Icon from "../icons/Icon";
+import WavyBlock from "./wavyBlock";
 
-function Footer() {
-  const isMobile = useMediaQuery({ query: '(max-width: 880px)' });
-  const isDesktop = useMediaQuery({ query: '(min-width: 881px)' });
-
+export default function Footer() {
   return (
-    <div className="footerContainer">
-
-      <div className="logo">
-       <img src={Manta} className="mantalogo"></img>
-      <h2 style={{ fontSize: '4vh', fontWeight: 'lighter', fontStyle: 'italic', cursor: 'default'}}>
-        Scuba SEAsons
-      </h2>
+    <footer className={styles.footer}>
+      <div className={styles.transition}>
+        <WavyBlock color="#0073e6" />
       </div>
-
-
-      <div className="cta">
-        {isDesktop && 
-           <>
-           <div className="ctaButtons">
-            <CTAButton hRef={'https://play.google.com/store/apps/details?id=com.freem11.divegomobile'} image={googlelogo}/>
-            <CTAButton hRef={'https://apps.apple.com/us/app/divego/id6450968950'} image={applelogo}/>
-            <CTAButton hRef={'https://scubaseasons.netlify.app'} image={scubaseasonslogo}/>
+      <div className={styles.footerContainer}>
+        <div className={styles.footerContent}>
+          <div className={styles.footerTop}>
+            <div className={styles.footerBlock}>
+              <Logo />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut
+              </p>
+              <ul className={styles.footerSocials}>
+                <li>
+                  <a
+                    className={styles.socialLink}
+                    href="https://www.instagram.com/scuba_seasons"
+                  >
+                    <Icon name="instagram" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className={styles.socialLink}
+                    href="https://www.facebook.com/people/Scuba-SEAsons/61554622375177/"
+                  >
+                    <Icon name="facebook" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className={styles.socialLink}
+                    href="https://www.youtube.com/@ScubaSEAsons/videos"
+                  >
+                    <Icon name="youtube" />
+                  </a>
+                </li>
+              </ul>
             </div>
-            <img src={Emilio} height={200} className='emilio'/>
-          </>
-          }
-         {isMobile && 
-           <>
-            <div className="ctaButtons">
-            <Button hRef={'https://play.google.com/store/apps/details?id=com.freem11.divegomobile'} icon={'android'} styles={'androidIcon'}/>
-            <Button hRef={'https://apps.apple.com/us/app/divego/id6450968950'} icon={'apple'}  styles={'appleIcon'}/>
-            <a href={'https://scubaseasons.netlify.app'} target="_blank">
-               <img src={Manta} style={{height: '9vh' }}></img>
-            </a>
-            </div>
-            <img src={Emilio} height={200} className='emilio' />
-          </>
-          }  
-        
-     </div>
 
-     <div className="rights">
-       <p>© 2025. All rights reserved.</p>
+            <div className={styles.footerBlock}>
+              <h3>Get the app</h3>
+              <div className={styles.footerCTAs}>
+                <DownloadBadge store="apple" small />
+                <DownloadBadge store="google" small />
+              </div>
+            </div>
+          </div>
+          <div className={styles.footerBottom}>
+            <div>© 2025 Scuba SEAsons. All rights reserved.</div>
+          </div>
+        </div>
       </div>
-
-  </div>
+    </footer>
   );
 }
-
-export default Footer;

@@ -1,90 +1,93 @@
-import './App.css'
-import './styles/fonts.scss'
-import TopBar from './components/topBar';
-import HeroPlayer from './components/backgroundHero';
-import BodyBackground from './components/backgroundBody';
-import HeroTagLines from './components/heroTaglines';
-import VideoPlayer from './components/videoPlayer';
-import PopOverContext from './components/contexts/popoverContext';
-import { useState } from 'react';
-import SearchExmaples from './components/searchExamplesPage';
-import SearchScripts from './components/searchScripts';
-import ContributeExmaples from './components/contributeExamplesPage';
-import ContributeScripts from './components/contributeScript';
-import BrandExmaples from './components/brandExamplesPage';
-import BrandScripts from './components/brandScript';
-import Footer from './components/footer';
-import BodyBackgroundConditional from './components/backgroundBodyConditional';
-
+import "./App.css";
+import Navbar from "./components/navbar";
+import Hero from "./components/hero";
+import Footer from "./components/footer";
+import Section from "./components/section";
+import sealifeMapImage from "./assets/sealife-map.png";
+import picUploaderImage from "./assets/pic-uploader.jpeg";
+import userProfileImage from "./assets/user-profile.jpeg";
 
 function App() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
   return (
-    <PopOverContext.Provider value={{ isOpen, setIsOpen }}>
-      <div className='container'>
-        <div className='boxHeader'>
-        <TopBar />
-        </div>
-        <div className='Row1'>
-        <HeroPlayer />
-        </div>
-        <div className='Row2'>
-          <BodyBackground />
-        </div>
-        <div className='Row3'>
-        <BodyBackground />
-        </div>
-        <div className='Row4'>
-        <BodyBackground />
-        </div>
-        <div className='Row5'>
-          <BodyBackgroundConditional/>
-        </div>
-        <div className='Row6'>
-        <BodyBackgroundConditional/>
-        </div>
-        <div className='Row7'>
-        </div>
-        <div className='Row8'>
-        </div>
-        <div className='Row9'>
-        </div>
-        <div className='boxFooter'>
-           <Footer/>
-        </div>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <div className="spacer"></div>
+        <Section>
+          <div className="twoCol">
+            <div className="sectionVisual">
+              <img src={sealifeMapImage} alt="map" className="image mapImage" />
+            </div>
+            <div className="sectionContent">
+              <h2>Find any sea creature, anywhere</h2>
+              <div>
+                <p>
+                  The map automatically pulls sea life for the area you are
+                  viewing
+                </p>
+                <p>
+                  Select a sea creature to see where it has been spotted and
+                  view it's seasonal trends for that area
+                </p>
+              </div>
+            </div>
+          </div>
+        </Section>
+        <Section>
+          <div className="twoCol">
+            <div className="sectionContent">
+              <h2>Help us grow, with your own contributions</h2>
+              <div>
+                <p>
+                  Add your favorite local dive sites to our list of over 10k,
+                  using one of our three options
+                </p>
+                <p>
+                  Show us why we should dive with you by contributing your sea
+                  life sightings
+                </p>
+              </div>
+            </div>
+            <div className="sectionVisual">
+              <img
+                src={picUploaderImage}
+                alt="Seals"
+                className="image picUploaderImage"
+              />
+            </div>
+          </div>
+        </Section>
+        <Section>
+          <div className="twoCol">
+            <div className="sectionVisual">
+              <img
+                src={userProfileImage}
+                alt="Manta"
+                className="image userProfileImage"
+              />
+            </div>
+            <div className="sectionContent">
+              <h2>Tell your diving story</h2>
+              <div>
+                <p>
+                  Every Dive site and sea life sighting you add will be shown on
+                  every photo and site
+                </p>
+                <p>
+                  All your sea life contributions are displayed on your profile,
+                  showing most recent, all the way to the start
+                </p>
+              </div>
+            </div>
+          </div>
+        </Section>
+        <div className="spacer"></div>
+      </main>
 
-        <div className='MobilePhone'>
-          <VideoPlayer/>
-        </div>
-        <div className='HeroScripts'>
-          <HeroTagLines/>
-        </div>
-     
-        <div className='SearchImages'>
-        <SearchExmaples/>
-        </div>
-        <div className='SearchScripts'>
-        <SearchScripts/>
-        </div>
-    
-        <div className='ContributeImages'>
-        <ContributeExmaples/>
-        </div>
-        <div className='ContributeScripts'>
-        <ContributeScripts/>
-        </div>
-
-        <div className='BrandImages'>
-            <BrandExmaples/>
-        </div>
-        <div className='BrandScripts'>
-            <BrandScripts/>
-        </div>
-
-      </div>
-      </PopOverContext.Provider>
-  )
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;

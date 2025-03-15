@@ -1,0 +1,28 @@
+.phoneWrapper {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phoneCase {
+  position: absolute;
+  height: 34rem;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.08));
+}
+
+.phoneVideo {
+  height: 32.5rem;
+  border-radius: 2rem;
+}
+
+@media screen and (max-width: 640px) {
+  .phoneCase {
+    height: 30rem;
+  }
+  .phoneVideo {
+    height: 29rem;
+  }
+}
