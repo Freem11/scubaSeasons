@@ -3,9 +3,9 @@ import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import Footer from "./components/footer";
 import Section from "./components/section";
-import sealifeMapImage from "./assets/sealife-map.png";
-import picUploaderImage from "./assets/pic-uploader.jpeg";
-import userProfileImage from "./assets/user-profile.jpeg";
+import sealifeImage from "./assets/sealife.png";
+import contributeImage from "./assets/contribute.png";
+import userProfileImage from "./assets/user-profile.png";
 
 function App() {
   return (
@@ -16,9 +16,11 @@ function App() {
         <div className="spacer"></div>
         <Section>
           <div className="twoCol">
-            <div className="sectionVisual">
-              <img src={sealifeMapImage} alt="map" className="image mapImage" />
-            </div>
+            <img
+              src={sealifeImage}
+              alt="Scuba SEAsons sea life map."
+              className="image"
+            />
             <div className="sectionContent">
               <h2>Find any sea creature, anywhere</h2>
               <div>
@@ -49,24 +51,20 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="sectionVisual">
-              <img
-                src={picUploaderImage}
-                alt="Seals"
-                className="image picUploaderImage"
-              />
-            </div>
+            <img
+              src={contributeImage}
+              alt="Scuba SEAsons forms to add new sea creatures and dive sites."
+              className="image"
+            />
           </div>
         </Section>
         <Section>
           <div className="twoCol">
-            <div className="sectionVisual">
-              <img
-                src={userProfileImage}
-                alt="Manta"
-                className="image userProfileImage"
-              />
-            </div>
+            <img
+              src={userProfileImage}
+              alt="Scuba SEAsons user profile."
+              className="image userProfileImage"
+            />
             <div className="sectionContent">
               <h2>Tell your diving story</h2>
               <div>

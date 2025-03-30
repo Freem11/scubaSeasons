@@ -15,8 +15,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 1.6rem;
-  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.3));
 }
 
 .sectionContent {
@@ -30,27 +28,6 @@
   margin-bottom: 0.5rem;
 }
 
-.sectionVisual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 2rem;
-}
-
-.mapImage {
-  transform: rotate(3deg);
-}
-
-.picUploaderImage {
-  transform: rotate(2deg);
-  max-width: 25rem;
-}
-
-.userProfileImage {
-  transform: rotate(-3deg);
-}
-
 @media screen and (max-width: 768px) {
   .twoCol {
     grid-template-columns: 1fr;
@@ -58,11 +35,8 @@
     text-align: center;
     gap: 2rem;
   }
-  .sectionContent {
+  .image {
     order: -1;
-  }
-  .sectionVisual {
-    padding: 0;
   }
   .spacer {
     height: 1rem;
