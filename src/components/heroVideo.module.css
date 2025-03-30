@@ -1,4 +1,10 @@
 .heroVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroVideoWrapper {
   overflow: hidden;
   position: absolute;
   z-index: -5;
