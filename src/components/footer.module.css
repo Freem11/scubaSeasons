@@ -83,3 +83,12 @@
   width: auto;
   color: white;
 }
+
+.textLink {
+  text-decoration: underline;
+  color: white;
+}
+
+.textLink:hover {
+  text-decoration: none;
+}

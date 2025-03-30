@@ -16,8 +16,14 @@ export default function Footer() {
             <div className={styles.footerBlock}>
               <Logo />
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut
+                Scuba SEAsons is also available on the web.{" "}
+                <a
+                  className={styles.textLink}
+                  href="https://scubaseasons.netlify.app"
+                >
+                  Create an account
+                </a>{" "}
+                to get started.
               </p>
               <ul className={styles.footerSocials}>
                 <li>
