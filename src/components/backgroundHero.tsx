@@ -1,4 +1,4 @@
-import WavyBlock from './reusables/wavyBlock';
+import WavyBlock from './wavyBlock';
 import '../App.css'
 
 function HeroPlayer() {
