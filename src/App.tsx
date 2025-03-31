@@ -22,15 +22,12 @@ function App() {
               className="image"
             />
             <div className="sectionContent">
-              <h2>Find any sea creature, anywhere</h2>
+              <h2>Explore a world of sea life</h2>
               <div>
                 <p>
-                  The map automatically pulls sea life for the area you are
-                  viewing
-                </p>
-                <p>
-                  Select a sea creature to see where it has been spotted and
-                  view it's seasonal trends for that area
+                  Find out which marine life is swimming nearby, and learn the
+                  best locations and times to encounter them on your next dive.
+                  It’s all just a tap away!
                 </p>
               </div>
             </div>
@@ -39,15 +36,13 @@ function App() {
         <Section>
           <div className="twoCol">
             <div className="sectionContent">
-              <h2>Help us grow, with your own contributions</h2>
+              <h2>Join a global community of divers</h2>
               <div>
                 <p>
-                  Add your favorite local dive sites to our list of over 10k,
-                  using one of our three options
-                </p>
-                <p>
-                  Show us why we should dive with you by contributing your sea
-                  life sightings
+                  Join a global network of ocean explorers! Contribute your
+                  favorite dive spots to our growing map of 10,000+ locations,
+                  share your underwater encounters, and help others discover
+                  hidden gems.
                 </p>
               </div>
             </div>
@@ -66,15 +61,13 @@ function App() {
               className="image userProfileImage"
             />
             <div className="sectionContent">
-              <h2>Tell your diving story</h2>
+              <h2>Document your diving adventures</h2>
               <div>
                 <p>
-                  Every Dive site and sea life sighting you add will be shown on
-                  every photo and site
-                </p>
-                <p>
-                  All your sea life contributions are displayed on your profile,
-                  showing most recent, all the way to the start
+                  Turn every dive into a lasting memory. Keep a personal log of
+                  your underwater adventures, track the marine species you
+                  encounter, and upload stunning photos to share with the
+                  community.
                 </p>
               </div>
             </div>
