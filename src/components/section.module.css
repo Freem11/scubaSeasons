@@ -1,0 +1,12 @@
+.section {
+  padding: 2rem 4rem;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+}

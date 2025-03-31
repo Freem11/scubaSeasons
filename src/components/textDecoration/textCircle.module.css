@@ -1,0 +1,7 @@
+.textCircle {
+  background-image: url(../../assets/circle.svg);
+  background-position: 30% 60%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 0.2rem;
+}

@@ -1,0 +1,24 @@
+.downloadBadge {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.downloadBadge > img {
+  height: 3rem;
+}
+
+.small > img {
+  height: 2.25rem;
+}
+
+.downloadBadge:hover {
+  transform: translateY(-0.2rem);
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+}
+
+@media screen and (max-width: 640px) {
+  .downloadBadge > img {
+    height: 2.5rem;
+  }
+}
