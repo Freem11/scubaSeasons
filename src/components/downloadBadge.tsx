@@ -25,6 +25,7 @@ export default function DownloadBadge(props: DownloadBadgeProps) {
   return (
     <a
       className={`${styles.downloadBadge} ${props.small && styles.small}`}
+      target="_blank"
       href={attributes.ulr}
     >
       <img src={attributes.img} alt={attributes.alt} />

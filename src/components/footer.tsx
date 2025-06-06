@@ -20,6 +20,7 @@ export default function Footer() {
                 Scuba SEAsons is also available on the web.{" "}
                 <a
                   className={styles.textLink}
+                  target="_blank"
                   href="https://scubaseasons.netlify.app"
                 >
                   Create an account
@@ -37,6 +38,7 @@ export default function Footer() {
                 <li>
                   <a
                     className={styles.socialLink}
+                    target="_blank"
                     href="https://www.instagram.com/scuba_seasons"
                   >
                     <Icon name="instagram" />
@@ -45,6 +47,7 @@ export default function Footer() {
                 <li>
                   <a
                     className={styles.socialLink}
+                    target="_blank"
                     href="https://www.facebook.com/people/Scuba-SEAsons/61554622375177/"
                   >
                     <Icon name="facebook" />
@@ -53,6 +56,7 @@ export default function Footer() {
                 <li>
                   <a
                     className={styles.socialLink}
+                    target="_blank"
                     href="https://www.youtube.com/@ScubaSEAsons/videos"
                   >
                     <Icon name="youtube" />
