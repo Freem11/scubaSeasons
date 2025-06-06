@@ -15,7 +15,11 @@ export default function Navbar() {
 
         <nav className={styles.navbarLinks}>
           {isDesktop && (
-            <a href="https://scubaseasons.netlify.app" className="button button-primary button-small">
+            <a
+              href="https://scubaseasons.netlify.app"
+              className="button button-primary button-small"
+              target="_blank"
+            >
               {"Join now"}
             </a>
           )}
