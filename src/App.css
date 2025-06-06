@@ -107,7 +107,3 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
-
-:global(html) {
-  scroll-behavior: smooth;
-}
