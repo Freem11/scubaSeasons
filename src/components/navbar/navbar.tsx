@@ -14,23 +14,14 @@ export default function Navbar() {
       </Link>
 
         <nav className={styles.navbarLinks}>
-          <Link to={"/faq"} className={styles.navLink}>
+          {isDesktop && (
+            <a href="https://scubaseasons.netlify.app" className="button button-primary button-small">
+              {"Join now"}
+            </a>
+          )}
+          <Link to={"/faq"} className="button button-outline button-small">
             {"FAQ"}
           </Link>
-          {isDesktop && (
-            <>
-              <a href="https://scubaseasons.netlify.app">
-                <button className="button button-outline button-small">
-                  Log in
-                </button>
-              </a>
-              <a href="https://scubaseasons.netlify.app">
-                <button className="button button-primary button-small">
-                  Join now
-                </button>
-              </a>
-            </>
-          )}
         </nav>
     </header>
   );

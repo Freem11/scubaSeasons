@@ -3,6 +3,7 @@ import styles from "./footer.module.css";
 import DownloadBadge from "./downloadBadge";
 import Icon from "../icons/Icon";
 import WavyBlock from "./wavyBlock";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -24,6 +25,13 @@ export default function Footer() {
                   Create an account
                 </a>{" "}
                 to get started.
+              </p>
+              <p>
+                {'Got questions? Check out our '}
+                <Link to={'/faq'} className={styles.textLink}>
+                  {'FAQ'}
+                </Link>
+                {'.'}
               </p>
               <ul className={styles.footerSocials}>
                 <li>

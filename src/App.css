@@ -57,6 +57,7 @@
   cursor: pointer;
   color: white;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .button > * {
