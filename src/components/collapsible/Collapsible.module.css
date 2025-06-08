@@ -1,0 +1,36 @@
+.trigger {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a202c;
+  cursor: pointer;
+  padding: 0.75rem 0;
+  transition: all 0.2s ease;
+}
+
+.trigger:hover {
+  color: #4299e1;
+}
+
+.iconWrapper {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon {
+  color: #1a202c;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.iconRotated {
+  transform: rotate(180deg);
+}
+
+.contentWrapper {
+  overflow: hidden;
+  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content {
+  padding-top: 0.5rem;
+}

@@ -37,31 +37,15 @@
 }
 
 .faqItem {
-  padding: 1.5rem;
-  background: #f7fafc;
+  padding: 1rem 1.5rem;
+  background: #ffffff;
   border-radius: 12px;
-  border-left: 4px solid #4299e1;
+  border: 1px solid #35475a33;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .faqItem:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.faqItem:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.faqItem:target {
-  border-left-color: #3182ce;
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
-}
-
-.faqQuestion {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #2d3748;
+  margin-bottom: 1.5rem;
 }
 
 .faqAnchor {
@@ -71,9 +55,8 @@
   transition: color 0.2s ease;
 }
 
-.faqAnchor:hover {
+.faqItem:hover .faqAnchor {
   color: #4299e1;
-  cursor: pointer;
 }
 
 .faqAnswer {
@@ -90,6 +73,37 @@
 .deletionSteps li {
   color: #4a5568;
   line-height: 1.6;
+  text-wrap: balance;
+}
+
+.gifContainer {
+  padding: 1.5rem;
+}
+
+.gif {
+  height: 500px;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.gifDesktop {
+  height: auto;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.calloutWithIcon {
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.calloutWithIcon svg {
+  margin-right: 2px;
+  position: relative;
+  top: 2px;
 }
 
 @media (max-width: 768px) {
@@ -105,4 +119,4 @@
   .faqQuestion {
     font-size: 1.1rem;
   }
-} 
+}
