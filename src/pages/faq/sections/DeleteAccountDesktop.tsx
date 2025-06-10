@@ -1,5 +1,5 @@
+import Icon from "../../../icons/Icon";
 import styles from "../FAQ.module.css";
-import { SettingsIcon } from "lucide-react";
 
 export default function DeleteAccountDesktop() {
   return (
@@ -8,7 +8,7 @@ export default function DeleteAccountDesktop() {
         <li>
           From the homepage, go to
           <span className={styles.calloutWithIcon}>
-            <SettingsIcon size={16} strokeWidth={3}/>
+             <Icon name="settings" className="text-blue" style={{height: 16, width: 16 }} />
             Settings
           </span>
           .

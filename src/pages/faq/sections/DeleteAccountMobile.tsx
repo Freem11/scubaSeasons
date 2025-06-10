@@ -1,5 +1,5 @@
+import Icon from "../../../icons/Icon";
 import styles from "../FAQ.module.css";
-import {SettingsIcon, UserIcon} from "lucide-react";
 
 export default function AddAccountMobile() {
   return (
@@ -8,7 +8,7 @@ export default function AddAccountMobile() {
         <li>
           From the home screen, navigate to
           <span className={styles.calloutWithIcon}>
-            <UserIcon size={16} strokeWidth={3}/>
+          <Icon name="person" style={{ height: 16, width: 16 }} />
             Profile
           </span>
           tab.
@@ -16,7 +16,7 @@ export default function AddAccountMobile() {
         <li>
           Tap the
           <span className={styles.calloutWithIcon}>
-            <SettingsIcon size={16} strokeWidth={3}/>
+          <Icon name="settings" style={{ height: 16, width: 16 }} />
             Gear
           </span>
           icon in the top right corner.

@@ -1,6 +1,6 @@
 import { useState, ReactNode, useRef, useEffect } from 'react'
-import { ChevronDownIcon } from 'lucide-react'
 import styles from './Collapsible.module.css';
+import Icon from '../../icons/Icon';
 
 interface CollapsibleProps {
   title: string | ReactNode
@@ -64,10 +64,7 @@ export default function Collapsible({
           {title}
         </div>
         <div className={styles.iconWrapper}>
-          <ChevronDownIcon 
-            size={20} 
-            className={`${styles.icon} ${isOpen ? styles.iconRotated : ''}`} 
-          />
+        <Icon name="chevron-down" className={`${styles.icon} ${isOpen ? styles.iconRotated : ''}`} style={{ height: 24, width: 24 }} />
         </div>
       </button>
       

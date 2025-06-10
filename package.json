@@ -12,7 +12,6 @@
     "cors": "^2.8.5",
     "firebase": "^11.3.1",
     "fs": "^0.0.1-security",
-    "lucide-react": "^0.513.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-player": "^2.16.0",
