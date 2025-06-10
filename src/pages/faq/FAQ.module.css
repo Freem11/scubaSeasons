@@ -53,6 +53,7 @@
   text-decoration: none;
   display: block;
   transition: color 0.2s ease;
+  text-align: left;
 }
 
 .faqItem:hover .faqAnchor {
@@ -73,7 +74,7 @@
 .deletionSteps li {
   color: #4a5568;
   line-height: 1.6;
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 .gifContainer {

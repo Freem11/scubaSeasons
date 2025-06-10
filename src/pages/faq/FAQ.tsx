@@ -4,41 +4,47 @@ import Tabs from "../../components/tabs/Tabs.tsx";
 import Collapsible from "../../components/collapsible/Collapsible.tsx";
 import DeleteAccountMobile from "./sections/DeleteAccountMobile.tsx";
 import DeleteAccountDesktop from "./sections/DeleteAccountDesktop.tsx";
+import { useMediaQuery } from "react-responsive";
+import { useMemo } from "react";
 
-const faqs = [
-    {
-        question: 'What is Scuba SEAsons?',
-        answer: 'Scuba SEAsons is a comprehensive platform for divers to explore marine life, find dive spots, and connect with a global community of ocean explorers. Discover which marine life is swimming nearby and learn the best locations and times to encounter them on your next dive.'
-    },
-    {
-        question: 'How do I delete my account and personal data?',
+
+export default function FAQ() {
+  const isLargerThanMobile = useMediaQuery({ query: "(min-width: 40rem)" });
+
+  const faqs = useMemo(() => (
+    [
+      {
+        question: "What is Scuba SEAsons?",
+        answer: "Scuba SEAsons is a comprehensive platform for divers to explore marine life, find dive spots, and connect with a global community of ocean explorers. Discover which marine life is swimming nearby and learn the best locations and times to encounter them on your next dive."
+      },
+      {
+        question: "How do I delete my account and personal data?",
         answer: (
           <div>
-            <p>{'You can delete your Scuba SEAsons account and all associated personal data by following these steps:'}</p>
+            <p>{"You can delete your Scuba SEAsons account and all associated personal data by following these steps:"}</p>
             <Tabs
               tabs={[
                 {
-                  id: 'mobile',
-                  label: 'Mobile',
+                  id: "mobile",
+                  label: "Mobile",
                   content: <DeleteAccountMobile />
                 },
-                {
-                  id: 'desktop',
-                  label: 'Desktop',
+                ...(isLargerThanMobile ? [{
+                  id: "desktop",
+                  label: "Desktop",
                   content: <DeleteAccountDesktop />
-                }
+                }] : [])
               ]}
             />
           </div>
         )
-    }
-
-  // how to add divesite
-  // how to submit a photo
-  // how to request partner
-]
-
-export default function FAQ() {
+      }
+      // Todo:
+      // how to add divesite
+      // how to submit a photo
+      // how to request partner
+    ]), [isLargerThanMobile]);
+  
   const createSlug = (question: string) => {
     return question
       .toLowerCase()
