@@ -1,16 +1,15 @@
-import Section from "../../components/section.tsx";
-import styles from "./FAQ.module.css";
-import Tabs from "../../components/tabs/Tabs.tsx";
-import Collapsible from "../../components/collapsible/Collapsible.tsx";
-import DeleteAccountMobile from "./sections/DeleteAccountMobile.tsx";
-import DeleteAccountDesktop from "./sections/DeleteAccountDesktop.tsx";
-import { useMediaQuery } from "react-responsive";
 import { useMemo } from "react";
 
+import Collapsible from "../../components/collapsible/Collapsible.tsx";
+import Section from "../../components/section.tsx";
+import styles from "./FAQ.module.css";
+
+import DeleteAccount from "./sections/DeleteAccount.tsx";
+import AddDiveSite from "./sections/AddDiveSite.tsx";
+import AddPhoto from "./sections/AddPhoto.tsx";
+import BecomePartner from "./sections/BecomePartner.tsx";
 
 export default function FAQ() {
-  const isLargerThanMobile = useMediaQuery({ query: "(min-width: 40rem)" });
-
   const faqs = useMemo(() => (
     [
       {
@@ -19,31 +18,21 @@ export default function FAQ() {
       },
       {
         question: "How do I delete my account and personal data?",
-        answer: (
-          <div>
-            <p>{"You can delete your Scuba SEAsons account and all associated personal data by following these steps:"}</p>
-            <Tabs
-              tabs={[
-                {
-                  id: "mobile",
-                  label: "Mobile",
-                  content: <DeleteAccountMobile />
-                },
-                ...(isLargerThanMobile ? [{
-                  id: "desktop",
-                  label: "Desktop",
-                  content: <DeleteAccountDesktop />
-                }] : [])
-              ]}
-            />
-          </div>
-        )
+        answer: <DeleteAccount />
+      },
+      {
+        question: "How do I add a dive site?",
+        answer: <AddDiveSite />
+      },
+      {
+        question: "How do I submit a photo of a sea creature sighting?",
+        answer: <AddPhoto />
+      },
+      {
+        question: "How do I become a partner?",
+        answer: <BecomePartner />
       }
-      // Todo:
-      // how to add divesite
-      // how to submit a photo
-      // how to request partner
-    ]), [isLargerThanMobile]);
+    ]), []);
   
   const createSlug = (question: string) => {
     return question
