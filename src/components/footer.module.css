@@ -4,8 +4,20 @@
 }
 
 .transition {
-  height: 6.5rem;
+  height: 8.5rem;
   position: relative;
+}
+
+@media (max-width: 999px) {
+  .transition {
+    height: 6.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .transition {
+    height: 2.5rem;
+  }
 }
 
 .footerContainer {

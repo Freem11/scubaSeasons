@@ -3,6 +3,7 @@ import styles from "./footer.module.css";
 import DownloadBadge from "./downloadBadge";
 import Icon from "../icons/Icon";
 import WavyBlock from "./wavyBlock";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -19,16 +20,25 @@ export default function Footer() {
                 Scuba SEAsons is also available on the web.{" "}
                 <a
                   className={styles.textLink}
+                  target="_blank"
                   href="https://scubaseasons.netlify.app"
                 >
                   Create an account
                 </a>{" "}
                 to get started.
               </p>
+              <p>
+                {'Got questions? Check out our '}
+                <Link to={'/faq'} className={styles.textLink}>
+                  {'FAQ'}
+                </Link>
+                {'.'}
+              </p>
               <ul className={styles.footerSocials}>
                 <li>
                   <a
                     className={styles.socialLink}
+                    target="_blank"
                     href="https://www.instagram.com/scuba_seasons"
                   >
                     <Icon name="instagram" />
@@ -37,6 +47,7 @@ export default function Footer() {
                 <li>
                   <a
                     className={styles.socialLink}
+                    target="_blank"
                     href="https://www.facebook.com/people/Scuba-SEAsons/61554622375177/"
                   >
                     <Icon name="facebook" />
@@ -45,6 +56,7 @@ export default function Footer() {
                 <li>
                   <a
                     className={styles.socialLink}
+                    target="_blank"
                     href="https://www.youtube.com/@ScubaSEAsons/videos"
                   >
                     <Icon name="youtube" />
