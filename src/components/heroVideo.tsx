@@ -1,9 +1,14 @@
 import { IKVideo } from 'imagekitio-react'
 import styles from './heroVideo.module.css'
+import videoPlaceholderData from '../assets/HeroVideo2025_placeholder'
 
 export default function HeroVideo() {
   return (
     <div className={styles.heroVideoWrapper}>
+      <img
+        className={styles.videoPlaceholder}
+        src={videoPlaceholderData}
+      />
       <IKVideo
         urlEndpoint="https://ik.imagekit.io/0xoaf9sms"
         path="/HeroVideo2025-1.mp4"
