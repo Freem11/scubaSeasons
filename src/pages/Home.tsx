@@ -1,8 +1,8 @@
 import Hero from "../components/hero";
 import Section from "../components/section";
-import sealifeImage from "../assets/sealife.png";
-import contributeImage from "../assets/contribute.png";
-import userProfileImage from "../assets/user-profile.png";
+import sealifeImage from "../assets/sealife.webp";
+import contributeImage from "../assets/contribute.webp";
+import userProfileImage from "../assets/user-profile.webp";
 
 export default function Home() {
   return (

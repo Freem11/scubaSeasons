@@ -1,4 +1,4 @@
-import googleBadge from "../assets/google-play-badge.svg";
+import googleBadge from "../assets/google-play-badge.png";
 import appleBadge from "../assets/app-store-badge.svg";
 import styles from "./downloadBadge.module.css";
 
