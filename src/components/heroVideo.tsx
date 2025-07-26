@@ -1,9 +1,16 @@
-import heroVid from "../assets/HeroVideo2025.mp4";
 import styles from "./heroVideo.module.css";
-
+import videoPlaceholderData from '../assets/HeroVideo2025_placeholder'
 export default function HeroVideo() {
+
+  const heroVid = 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/HeroVideo2025.webm'
+
   return (
     <div className={styles.heroVideoWrapper}>
+      <img
+        className={styles.videoPlaceholder}
+        src={videoPlaceholderData}
+       />
+
       <video
         className={styles.heroVideo}
         src={heroVid}
