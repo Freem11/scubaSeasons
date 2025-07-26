@@ -1,22 +1,19 @@
-import heroVid from "../assets/HeroVideo2025.mp4";
-import styles from "./heroVideo.module.css";
+import { IKVideo } from 'imagekitio-react'
+import styles from './heroVideo.module.css'
 
 export default function HeroVideo() {
   return (
     <div className={styles.heroVideoWrapper}>
-      <video
-        className={styles.heroVideo}
-        src={heroVid}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-      >
-        <source src={heroVid} type="video/mp4" />
-        <source src={heroVid} type="video/webm" />
-        Your browser does not support the video tag.
-      </video>
+      <IKVideo
+        urlEndpoint="https://ik.imagekit.io/0xoaf9sms"
+        path="/HeroVideo2025-1.mp4"
+        controls={false}
+        autoPlay={true}
+        loop={true}
+        muted={true}
+        playsInline={true}
+        className={`${styles.heroVideo} ${styles.desktopVideo}`}
+      />
     </div>
-  );
+  )
 }

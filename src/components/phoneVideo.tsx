@@ -1,23 +1,21 @@
 import phoneCase from "../assets/iPhone14Skin.png";
-import headlinerVid from "../assets/MobileVideo.mp4";
 import styles from "./phoneVideo.module.css";
+import { IKVideo } from "imagekitio-react";
 
 export default function PhoneVideo() {
   return (
     <div className={styles.phoneWrapper}>
       <img src={phoneCase} className={styles.phoneCase}></img>
-      <video
-        src={headlinerVid}
-        className={styles.phoneVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-      >
-        <source src={headlinerVid} type="video/mp4" />
-        <source src={headlinerVid} type="video/webm" />
-      </video>
+      <IKVideo
+        urlEndpoint="https://ik.imagekit.io/0xoaf9sms"
+        path="/IPhone2025.mp4"
+        controls={false}
+        autoPlay={true}
+        loop={true}
+        muted={true}
+        playsInline={true}
+        className={`${styles.heroVideo} ${styles.phoneVideo}`}
+      />
     </div>
   );
 }
