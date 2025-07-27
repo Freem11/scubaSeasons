@@ -1,8 +1,5 @@
 import Hero from "../components/hero";
 import Section from "../components/section";
-import sealifeImage from "../assets/sealife.png";
-import contributeImage from "../assets/contribute.png";
-import userProfileImage from "../assets/user-profile.png";
 
 export default function Home() {
   return (
@@ -12,7 +9,7 @@ export default function Home() {
       <Section>
         <div className={'twoCol'}>
           <img
-            src={sealifeImage}
+            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/sealife.png'}
             alt={'Scuba SEAsons sea life map.'}
             className={'image'}
           />
@@ -42,7 +39,7 @@ export default function Home() {
             </div>
           </div>
           <img
-            src={contributeImage}
+            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/contribute.png'}
             alt={'Scuba SEAsons forms to add new sea creatures and dive sites.'}
             className={'image'}
           />
@@ -51,7 +48,7 @@ export default function Home() {
       <Section>
         <div className={'twoCol'}>
           <img
-            src={userProfileImage}
+            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/user-profile.png'}
             alt={'Scuba SEAsons user profile.'}
             className={'image userProfileImage'}
           />

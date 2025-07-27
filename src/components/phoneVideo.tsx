@@ -1,13 +1,11 @@
-import phoneCase from "../assets/iPhone14Skin.png";
-import headlinerVid from "../assets/MobileVideo.mp4";
 import styles from "./phoneVideo.module.css";
 
 export default function PhoneVideo() {
   return (
     <div className={styles.phoneWrapper}>
-      <img src={phoneCase} className={styles.phoneCase}></img>
+      <img src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/iPhone16plus.png'} className={styles.phoneCase}></img>
       <video
-        src={headlinerVid}
+        src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/IPhone2025.mp4'}
         className={styles.phoneVideo}
         autoPlay
         loop
@@ -15,8 +13,8 @@ export default function PhoneVideo() {
         playsInline
         preload="auto"
       >
-        <source src={headlinerVid} type="video/mp4" />
-        <source src={headlinerVid} type="video/webm" />
+        <source src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/IPhone2025.mp4'} type="video/mp4" />
+        <source src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/IPhone2025.mp4'} type="video/webm" />
       </video>
     </div>
   );

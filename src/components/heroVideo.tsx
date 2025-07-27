@@ -1,4 +1,3 @@
-import heroVid from "../assets/HeroVideo2025.mp4";
 import styles from "./heroVideo.module.css";
 
 export default function HeroVideo() {
@@ -6,15 +5,15 @@ export default function HeroVideo() {
     <div className={styles.heroVideoWrapper}>
       <video
         className={styles.heroVideo}
-        src={heroVid}
+        src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/HeroVideo2025.mp4`}
         autoPlay
         loop
         muted
         playsInline
         preload="auto"
       >
-        <source src={heroVid} type="video/mp4" />
-        <source src={heroVid} type="video/webm" />
+        <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/HeroVideo2025.mp4`} type="video/mp4" />
+        <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/HeroVideo2025.mp4`} type="video/webm" />
         Your browser does not support the video tag.
       </video>
     </div>
