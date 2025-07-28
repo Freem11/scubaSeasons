@@ -1,3 +1,14 @@
+.videoPlaceholder{
+  width: 45%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  border-radius: 2rem;
+  z-index: -1;
+}
+
+
 .phoneWrapper {
   position: relative;
   z-index: 5;

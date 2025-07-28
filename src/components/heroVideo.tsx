@@ -1,7 +1,7 @@
 import styles from "./heroVideo.module.css";
 import videoPlaceholderData from '../assets/HeroVideo2025_placeholder'
-export default function HeroVideo() {
 
+export default function HeroVideo() {
   return (
     <div className={styles.heroVideoWrapper}>
       <img
