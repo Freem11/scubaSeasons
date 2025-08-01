@@ -1,6 +1,7 @@
 import phoneCase from "../assets/iPhone14Skin.png";
 import styles from "./phoneVideo.module.css";
 import { IKVideo } from "imagekitio-react";
+import phonePlaceholderData from '../assets/splash_placeholder';
 
 export default function PhoneVideo() {
   return (
