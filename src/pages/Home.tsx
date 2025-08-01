@@ -1,8 +1,6 @@
 import Hero from "../components/hero";
 import Section from "../components/section";
-import sealifeImage from "../assets/sealife.png";
-import contributeImage from "../assets/contribute.png";
-import userProfileImage from "../assets/user-profile.png";
+import { IKImage } from "imagekitio-react";
 
 export default function Home() {
   return (
@@ -11,10 +9,15 @@ export default function Home() {
       <div className={'spacer'}></div>
       <Section>
         <div className={'twoCol'}>
-          <img
-            src={sealifeImage}
+          <IKImage
+            urlEndpoint="https://ik.imagekit.io/0xoaf9sms"
+            path="/sealife.png"
             alt={'Scuba SEAsons sea life map.'}
             className={'image'}
+            transformation={[{
+              width: 552,
+              height: 380
+            }]}
           />
           <div className={'sectionContent'}>
             <h2>Explore a world of sea life</h2>
@@ -41,19 +44,29 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <img
-            src={contributeImage}
+          <IKImage
+            urlEndpoint="https://ik.imagekit.io/0xoaf9sms"
+            path="/contribute.png"
             alt={'Scuba SEAsons forms to add new sea creatures and dive sites.'}
             className={'image'}
+            transformation={[{
+              width: 552,
+              height: 380
+            }]}
           />
         </div>
       </Section>
       <Section>
         <div className={'twoCol'}>
-          <img
-            src={userProfileImage}
+          <IKImage
+            urlEndpoint="https://ik.imagekit.io/0xoaf9sms"
+            path="/user-profile.png"
             alt={'Scuba SEAsons user profile.'}
             className={'image userProfileImage'}
+            transformation={[{
+              width: 552,
+              height: 380
+            }]}
           />
           <div className={'sectionContent'}>
             <h2>Document your diving adventures</h2>

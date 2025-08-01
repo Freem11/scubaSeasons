@@ -3,7 +3,7 @@ import styles from "./logo.module.css";
 export default function Logo() {
   return (
     <div className={styles.logo}>
-      <img src="/Matt_Manta_White.png" className={styles.logoImage}></img>
+      <img alt="logo" src="/Matt_Manta_White.webp" className={styles.logoImage} />
       <span>Scuba SEAsons</span>
     </div>
   );

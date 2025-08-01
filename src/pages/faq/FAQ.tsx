@@ -8,6 +8,9 @@ import DeleteAccount from "./sections/DeleteAccount.tsx";
 import AddDiveSite from "./sections/AddDiveSite.tsx";
 import AddPhoto from "./sections/AddPhoto.tsx";
 import BecomePartner from "./sections/BecomePartner.tsx";
+import WhyAddSite from "./sections/WhyAddSite.tsx";
+import WhyAddPhoto from "./sections/WhyAddPhoto.tsx";
+import WhyPartner from "./sections/WhyPartner.tsx";
 
 export default function FAQ() {
   const faqs = useMemo(() => (
@@ -17,20 +20,32 @@ export default function FAQ() {
         answer: "Scuba SEAsons is a comprehensive platform for divers to explore marine life, find dive spots, and connect with a global community of ocean explorers. Discover which marine life is swimming nearby and learn the best locations and times to encounter them on your next dive."
       },
       {
-        question: "How do I delete my account and personal data?",
-        answer: <DeleteAccount />
-      },
-      {
         question: "How do I add a dive site?",
         answer: <AddDiveSite />
       },
+      {
+        question: "Why should I add my dive sites to Scuba SEAsons?",
+        answer: <WhyAddSite />
+      },     
       {
         question: "How do I submit a photo of a sea creature sighting?",
         answer: <AddPhoto />
       },
       {
-        question: "How do I become a partner?",
+        question: "Why should I contribute my sea life sightings to Scuba SEAsons?",
+        answer: <WhyAddPhoto />
+      },
+      {
+        question: "How do I upgrade to a partner account?",
         answer: <BecomePartner />
+      },
+      {
+        question: "I run / work at a dive centre, why should I upgrade my account to a Partner Account?",
+        answer: <WhyPartner />
+      },
+      {
+        question: "How do I delete my account and personal data?",
+        answer: <DeleteAccount />
       }
     ]), []);
   
