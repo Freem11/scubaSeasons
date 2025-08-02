@@ -58,11 +58,6 @@ export default function DeleteAccount() {
                   <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/mobile-delete-account-guide.mp4`} type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
-                  {/* <img
-                    src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/mobile-delete-account-guide.mp4`}
-                    alt="Step-by-step guide showing how to delete your account on mobile"
-                    className={styles.gif}
-                  /> */}
                 </div>
               </div>
             )
@@ -98,11 +93,6 @@ export default function DeleteAccount() {
                   <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/web-delete-account-guide.mp4`} type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
-                  {/* <img
-                    src="/src/assets/FAQ/how-to-delete-account-desktop.gif"
-                    alt="Step-by-step guide showing how to delete your account on desktop"
-                    className={styles.gifDesktop}
-                  /> */}
                 </div>
               </div>
             )

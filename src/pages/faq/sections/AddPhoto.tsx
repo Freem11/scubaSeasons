@@ -56,11 +56,6 @@ export default function AddPhoto() {
                   <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/mobile-add-photo-guide.mp4`} type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
-                  {/* <img
-                    src="/src/assets/FAQ/how-to-add-photo.gif"
-                    alt="Step-by-step guide showing how to add a photo on mobile"
-                    className={styles.gif}
-                  /> */}
                 </div>
               </div>
             )},
@@ -100,11 +95,6 @@ export default function AddPhoto() {
                   <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/web-add-photo-guide.mp4`} type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
-                  {/* <img
-                    src="/src/assets/FAQ/how-to-add-photo-desktop.gif"
-                    alt="Step-by-step guide showing how to add a photo on desktop"
-                    className={styles.gifDesktop}
-                  /> */}
                 </div>
               </div>
             )

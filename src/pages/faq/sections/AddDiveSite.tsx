@@ -46,11 +46,6 @@ export default function AddDiveSite() {
                   <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/mobile-site-submit-guide.mp4`} type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
-                  {/* <img
-                    src="https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/mobile-site-submit.mp4"
-                    alt="Step-by-step guide showing how to add a dive site on mobile"
-                    className={styles.gif}
-                  /> */}
                 </div>
               </div>
             )},
@@ -88,11 +83,6 @@ export default function AddDiveSite() {
                   <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/web-site-submit-guide.mp4`} type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
-                  {/* <img
-                    src="/src/assets/FAQ/how-to-add-a-dive-site-desktop.gif"
-                    alt="Step-by-step guide showing how to add a dive site on desktop"
-                    className={styles.gifDesktop}
-                  /> */}
                 </div>
               </div>
             )
