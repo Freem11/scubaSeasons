@@ -17,8 +17,9 @@
   margin-right: auto;
   margin-left: auto;
   padding: 8rem 4rem;
-  max-width: 70rem;
   gap: 2rem;
+  width: 100%;
+  max-width: 1200px
 }
 
 .heroContent {
@@ -69,6 +70,7 @@
     grid-template-columns: 1fr;
     padding: 4rem;
     text-align: center;
+    justify-items: center;
   }
   .heroContent {
     align-items: center;
