@@ -32,6 +32,7 @@
   font-size: 16px;
   display: flex;
   flex-direction: column;
+  max-width: 32rem;
   gap: 1rem;
 }
 
