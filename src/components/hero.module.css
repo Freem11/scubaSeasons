@@ -19,7 +19,8 @@
   padding: 8rem 4rem;
   gap: 2rem;
   width: 100%;
-  max-width: 1200px
+  max-width: 1200px;
+  box-sizing: border-box;
 }
 
 .heroContent {
@@ -60,6 +61,12 @@
   z-index: -1;
 }
 
+@media screen and (max-width: 980px) {
+  .heroBlock {
+    grid-template-columns: 1fr 260px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hero {
     justify-content: start;
@@ -88,6 +95,10 @@
 }
 
 @media screen and (max-width: 640px) {
+  .heroHeading h1 {
+    max-width: 100%;
+  }
+
   .heroBlock {
     padding: 4rem 2rem;
   }
