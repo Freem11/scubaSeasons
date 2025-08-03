@@ -4,25 +4,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 545px;
 }
 
 .phoneCase {
   position: absolute;
-  height: 34rem;
+  height: 545px;
+  width: 270px;
+  object-fit: contain;
   filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))
     drop-shadow(0 2px 2px rgb(0 0 0 / 0.08));
 }
 
 .phoneVideo {
-  height: 32.5rem;
+  height: 520px;
+  width: 240px;
+  object-fit: cover;
   border-radius: 2rem;
 }
 
 @media screen and (max-width: 640px) {
+  .phoneWrapper {
+    height: 485px;
+  }
   .phoneCase {
-    height: 30rem;
+    height: 485px;
+    width: 260px;
   }
   .phoneVideo {
-    height: 29rem;
+    height: 460px;
+    width: 214px;
   }
 }
