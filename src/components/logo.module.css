@@ -2,13 +2,17 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: lighter;
+  font-weight: 300;
   font-style: italic;
   font-size: 1.75rem;
   color: rgba(255, 255, 255, 0.87);
   text-wrap: nowrap;
+  font-family: "DM Sans", sans-serif;
+  font-size-adjust: 0.53;
 }
 
 .logoImage {
   height: 2.5rem;
+  position: relative;
+  top: -3px;
 }
