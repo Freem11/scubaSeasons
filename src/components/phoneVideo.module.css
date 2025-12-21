@@ -51,7 +51,36 @@
 
 @media screen and (max-width: 640px) {
   .phoneVideo {
-    margin-left: -50px;;
+    padding: 4rem 2rem 2rem 4rem;
     width: 140vw;
+  }
+
+  .phoneWrapper {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 545px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .phoneVideo {
+    margin-top: -6rem;
+    padding: 4rem 2rem 2rem 4rem;
+    width: 140vw;
+  }
+
+  .phoneWrapper {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 545px;
   }
 }

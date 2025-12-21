@@ -72,12 +72,12 @@
 @media screen and (max-width: 840px) {
   .hero {
     justify-content: start;
-    padding-top: 4rem;
+    padding-top: 4rem 0 0 0;
     height: auto;
   }
   .heroBlock {
     grid-template-columns: 1fr;
-    padding: 4rem;
+    padding: 8rem 0 0 0;
     text-align: center;
     justify-items: center;
   }
@@ -96,12 +96,24 @@
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 500px) {
   .heroHeading h1 {
     max-width: 100%;
   }
 
   .heroBlock {
-    padding: 4rem 2rem;
+    width: 140vw;
+    grid-template-columns: 1fr;
+    padding: 4rem 2rem 2rem 2rem;
+    text-align: center;
+    justify-items: center;
+  }
+  .heroHeading {
+    align-items: center;
+    max-width: 70%;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  .heroCTAs {
+    justify-content: center;
   }
 }
