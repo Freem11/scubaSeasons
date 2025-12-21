@@ -11,15 +11,15 @@ export default function HeroVideo() {
 
       <video
         className={styles.heroVideo}
-        src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/HeroVideo2025.mp4`}
+        src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/HeroVideo2026-1.mov`}
         autoPlay
         loop
         muted
         playsInline
         preload="auto"
       >
-        <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/HeroVideo2025.mp4`} type="video/mp4" />
-        <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/HeroVideo2025.mp4`} type="video/webm" />
+        <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/HeroVideo2026-1.mov`} type="video/mp4" />
+        <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/HeroVideo2026-1.mov`} type="video/webm" />
         Your browser does not support the video tag.
       </video>
     </div>

@@ -27,13 +27,12 @@
 }
 
 .phoneVideo {
-  height: 520px;
-  width: 240px;
+  width: 60vw;
   object-fit: cover;
   border-radius: 2rem;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 840px) {
   .phoneWrapper {
     height: 485px;
   }
@@ -42,11 +41,17 @@
     width: 260px;
   }
   .phoneVideo {
-    height: 460px;
-    width: 214px;
+    width: 100vw;
   }
 
   .videoPlaceholder{
     height: 29rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .phoneVideo {
+    margin-left: -50px;;
+    width: 140vw;
   }
 }
