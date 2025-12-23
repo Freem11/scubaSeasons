@@ -47,15 +47,15 @@ export default function BecomePartner() {
                 <div className={styles.gifContainer}>
                   <video
                     className={styles.gif}
-                    src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/mobile-partner-account-guide.mp4`}
+                    src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/PartnerUpgrade.mp4`}
                     autoPlay
                     loop
                     muted
                     playsInline
                     preload="auto"
                   >
-                    <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/mobile-partner-account-guide.mp4`} type="video/mp4" />
-                    <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/mobile-partner-account-guide.mp4`} type="video/webm" />
+                    <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/PartnerUpgrade.mp4`} type="video/mp4" />
+                    <source src={`https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/PartnerUpgrade.mp4`} type="video/webm" />
                     Your browser does not support the video tag.
                   </video>
                 </div>

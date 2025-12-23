@@ -4,25 +4,25 @@ export default function WhyAddPhoto() {
   return (
     <div>
       <div className={styles.faqAnswer}>
-        Any <strong>sea life photos you contribute</strong> to <strong>Scuba SEAsons</strong> are linked to your account and <strong>credited to you</strong>.
+        To create a map of the best season to dive with <strong>any</strong> sea creature <strong>anywhere in the world!</strong>
       </div>
 
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-        Adding your sightings <strong>adds to the dataset</strong> and gives everyone a <strong>better picture</strong> of where and when sea life are in different parts of the world.
+        Sea life sighting photos (and reveiws) are attached to the dive site they were taken on, but also <strong>carry the date of your dive</strong>.
       </div>
 
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-        There is <strong>no worse feeling</strong> than taking a dive trip only to find out a species you were really hoping to see is <strong>out of season</strong>. Together, with all of us adding our sightings, we can ensure that it <strong>never happens to another diver ever again</strong>.
+        This allows your sighting to not only tell us <strong>where</strong> it took place but <strong>when</strong> as well
       </div>
 
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-        <strong>Showcase where you have been diving</strong> and what sea life you encountered, and in turn <strong>find out where you should go next</strong> by seeing what other <strong>cool sea life</strong> other divers have spotted in other places!
+        By adding your sighitngs, you join divers worldwide in the goal of capturing seasonal trend in sea life on dive sites.
       </div>
     </div>
   );

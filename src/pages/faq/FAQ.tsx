@@ -7,9 +7,11 @@ import styles from "./FAQ.module.css";
 import DeleteAccount from "./sections/DeleteAccount.tsx";
 import AddDiveSite from "./sections/AddDiveSite.tsx";
 import AddPhoto from "./sections/AddPhoto.tsx";
+import AddDiveSiteReview from "./sections/AddDiveSiteReview.tsx";
 import BecomePartner from "./sections/BecomePartner.tsx";
 import WhyAddSite from "./sections/WhyAddSite.tsx";
 import WhyAddPhoto from "./sections/WhyAddPhoto.tsx";
+import WhyAddSiteReview from "./sections/WhyAddSiteReview.tsx";
 import WhyPartner from "./sections/WhyPartner.tsx";
 
 export default function FAQ() {
@@ -28,12 +30,20 @@ export default function FAQ() {
         answer: <WhyAddSite />
       },     
       {
-        question: "How do I submit a photo of a sea creature sighting?",
+        question: "How do I submit my sea creature sighting photos?",
         answer: <AddPhoto />
       },
       {
         question: "Why should I contribute my sea life sightings to Scuba SEAsons?",
         answer: <WhyAddPhoto />
+      },
+      {
+        question: "How do I add a review of a dive site?",
+        answer: <AddDiveSiteReview />
+      },
+      {
+        question: "Why should I add reveiws to dive sites in Scuba Seasons?",
+        answer: <WhyAddSiteReview />
       },
       {
         question: "How do I upgrade to a partner account?",

@@ -10,19 +10,19 @@ export default function WhyAddSite() {
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-        In <strong>Scuba SEAsons</strong>, dive sites serve as the <strong>‘anchor’ for sea life sightings</strong>. You know what dive site you were at when you took the photo, and this <strong> makes it easier for divers to make contributions</strong> with their sea life sightings.
+        In <strong>Scuba SEAsons</strong>, dive sites serve as the <strong>‘anchor’ for sea life sightings and reviews</strong>. You know what dive site you were at when you took the photo, and this <strong> makes it easier for divers to make contributions</strong> with their sea life sightings and reveiws.
       </div>
 
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-        Adding a sighting to a <strong>dive site by name</strong> is much easier than trying to add it using <strong>GPS coordinates</strong>.
+        Adding sightings and reveiws to a <strong>dive site by name</strong> is much easier than trying to add it using <strong>GPS coordinates</strong>.
       </div>
 
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-        If your <strong>local dive sites</strong> are in Scuba SEAsons, <strong>all divers can add their sea life sightings</strong>, and you get to <strong>show off why other divers should come dive in your local area!</strong>
+        If your <strong>local dive sites</strong> are in Scuba SEAsons, <strong>all divers can add their sea life sightings and add reveiws</strong>, and you get to <strong>show off why other divers should come dive in your local area!</strong>
       </div>
     </div>
   );
