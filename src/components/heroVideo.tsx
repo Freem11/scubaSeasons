@@ -1,5 +1,5 @@
 import styles from "./heroVideo.module.css";
-import videoPlaceholderData from '../assets/HeroVideo2025_placeholder'
+import videoPlaceholderData from '../assets/HeroVideo_placeholder'
 
 export default function HeroVideo() {
   return (
