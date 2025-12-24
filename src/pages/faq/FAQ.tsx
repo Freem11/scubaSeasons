@@ -8,11 +8,13 @@ import DeleteAccount from "./sections/DeleteAccount.tsx";
 import AddDiveSite from "./sections/AddDiveSite.tsx";
 import AddPhoto from "./sections/AddPhoto.tsx";
 import AddDiveSiteReview from "./sections/AddDiveSiteReview.tsx";
+import CreateTrip from "./sections/CreateTrip.tsx";
 import BecomePartner from "./sections/BecomePartner.tsx";
 import WhyAddSite from "./sections/WhyAddSite.tsx";
 import WhyAddPhoto from "./sections/WhyAddPhoto.tsx";
 import WhyAddSiteReview from "./sections/WhyAddSiteReview.tsx";
 import WhyPartner from "./sections/WhyPartner.tsx";
+
 
 export default function FAQ() {
   const faqs = useMemo(() => (
@@ -52,6 +54,10 @@ export default function FAQ() {
       {
         question: "I run / work at a dive centre, why should I upgrade my account to a Partner Account?",
         answer: <WhyPartner />
+      },
+      {
+        question: "I run / work at a dive centre, how can I promote my dive trips with Scuba Seasons?",
+        answer: <CreateTrip />
       },
       {
         question: "How do I delete my account and personal data?",
