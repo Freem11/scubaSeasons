@@ -28,13 +28,7 @@ export default function WhyPartner() {
       <div style={{ height: 20 }} /> 
 
       <div className={styles.faqAnswer}>
-        With this intial investment of effort, you will have a <strong>created a cycle of fresh content</strong> coming in from present trips to promote your future ones with. 
-      </div>
-
-      <div style={{ height: 20 }} /> 
-
-      <div className={styles.faqAnswer}>
-        Note: The Trip Creator also has a  <strong>trip cloning feature</strong>, this lets you copy an existing trip to make <strong>creating new trips even easier and much faster</strong>.
+        With this intial investment of effort, you will have a <strong>created a cycle of fresh self renewing content</strong> generated from your divers participating on your trips. 
       </div>
     </div>
   );

@@ -24,36 +24,36 @@ export default function FAQ() {
         answer: "Scuba SEAsons is a comprehensive platform for divers to explore marine life, find dive spots, and connect with a global community of ocean explorers. Discover which marine life is swimming nearby and learn the best locations and times to encounter them on your next dive."
       },
       {
-        question: "How do I add a dive site?",
-        answer: <AddDiveSite />
-      },
-      {
         question: "Why should I add my dive sites to Scuba SEAsons?",
         answer: <WhyAddSite />
-      },     
+      },    
       {
-        question: "How do I submit my sea creature sighting photos?",
-        answer: <AddPhoto />
+        question: "How do I add a dive site?",
+        answer: <AddDiveSite />
       },
       {
         question: "Why should I contribute my sea life sightings to Scuba SEAsons?",
         answer: <WhyAddPhoto />
       },
       {
-        question: "How do I add a review of a dive site?",
-        answer: <AddDiveSiteReview />
+        question: "How do I submit my sea creature sighting photos?",
+        answer: <AddPhoto />
       },
       {
         question: "Why should I add reveiws to dive sites in Scuba Seasons?",
         answer: <WhyAddSiteReview />
       },
       {
-        question: "How do I upgrade to a partner account?",
-        answer: <BecomePartner />
+        question: "How do I add a review of a dive site?",
+        answer: <AddDiveSiteReview />
       },
       {
         question: "I run / work at a dive centre, why should I upgrade my account to a Partner Account?",
         answer: <WhyPartner />
+      },
+      {
+        question: "How do I upgrade to a partner account?",
+        answer: <BecomePartner />
       },
       {
         question: "I run / work at a dive centre, how can I promote my dive trips with Scuba Seasons?",
