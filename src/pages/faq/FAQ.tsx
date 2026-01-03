@@ -14,6 +14,8 @@ import WhyAddSite from "./sections/WhyAddSite.tsx";
 import WhyAddPhoto from "./sections/WhyAddPhoto.tsx";
 import WhyAddSiteReview from "./sections/WhyAddSiteReview.tsx";
 import WhyPartner from "./sections/WhyPartner.tsx";
+import Preamble from "./sections/PreAmble.tsx";
+import WhyLeverage from "./sections/WhyLeverage.tsx";
 
 
 export default function FAQ() {
@@ -21,7 +23,7 @@ export default function FAQ() {
     [
       {
         question: "What is Scuba SEAsons?",
-        answer: "Scuba SEAsons is a comprehensive platform for divers to explore marine life, find dive spots, and connect with a global community of ocean explorers. Discover which marine life is swimming nearby and learn the best locations and times to encounter them on your next dive."
+        answer: <Preamble/>
       },
       {
         question: "Why should I add my dive sites to Scuba SEAsons?",
@@ -54,6 +56,10 @@ export default function FAQ() {
       {
         question: "How do I upgrade to a partner account?",
         answer: <BecomePartner />
+      },
+      {
+        question: "How can a Partner Account use sea life data and diver contributions to promote dive trips?",
+        answer: <   WhyLeverage />
       },
       {
         question: "I run / work at a dive centre, how can I promote my dive trips with Scuba Seasons?",

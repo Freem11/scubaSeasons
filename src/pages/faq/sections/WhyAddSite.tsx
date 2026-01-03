@@ -4,26 +4,26 @@ export default function WhyAddSite() {
   return (
     <div>
       <div className={styles.faqAnswer}>
-        When we go diving we are often told the <strong>name of a dive site</strong> and record it for our dive logs.
+      Dive sites make it easier for divers to add sightings and help promote your local diving area.
       </div>
 
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-        In <strong>Scuba SEAsons</strong>, dive sites serve as the <strong>‘anchor’ for sea life sightings and reviews</strong>. You know what dive site you were at when you took the photo, and this <strong> makes it easier for divers to make contributions</strong> with their sea life sightings and reveiws.
+      When divers log a dive, they usually remember the name of the dive site, not the exact GPS location.
       </div>
 
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-        Adding sightings and reveiws to a <strong>dive site by name</strong> is much easier than trying to add it using <strong>GPS coordinates</strong>.
+      In Scuba SEAsons, dive sites are used as an “anchor” for marine life sightings. So by adding your local dive sites, you enable divers to link their sightings directly to those locations.
       </div>
-
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-        If your <strong>local dive sites</strong> are in Scuba SEAsons, <strong>all divers can add their sea life sightings and add reveiws</strong>, and you get to <strong>show off why other divers should come dive in your local area!</strong>
+      Over time, this builds a clear and reliable picture of the marine life in your area and helps show other divers why your region is worth visiting.
       </div>
+
     </div>
   );
 }

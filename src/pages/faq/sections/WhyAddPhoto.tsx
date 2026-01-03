@@ -4,25 +4,31 @@ export default function WhyAddPhoto() {
   return (
     <div>
       <div className={styles.faqAnswer}>
-        To create a map of the best season to dive with <strong>any</strong> sea creature <strong>anywhere in the world!</strong>
+      Your sightings are credited to you and help improve dive planning for the entire community.
       </div>
 
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-        Sea life sighting photos (and reveiws) are attached to the dive site they were taken on, but also <strong>carry the date of your dive</strong>.
+      Every marine life photo or sighting you upload is linked to your account and credited to you.
       </div>
 
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-        This allows your sighting to not only tell us <strong>where</strong> it took place but <strong>when</strong> as well
+      Each contribution adds valuable data that helps build a clearer picture of where and when different species are typically seen.
       </div>
 
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-        By adding your sighitngs, you join divers worldwide in the goal of capturing seasonal trend in sea life on dive sites.
+      When divers share sightings collectively, trip planning becomes more reliable and predictable.
+      </div>
+
+      <div style={{ height: 20 }} />
+
+      <div className={styles.faqAnswer}>
+      Your contributions not only highlight your own diving experience but also help other divers discover new destinations through shared sightings.
       </div>
     </div>
   );
