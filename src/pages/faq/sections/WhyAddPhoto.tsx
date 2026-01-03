@@ -16,13 +16,13 @@ export default function WhyAddPhoto() {
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-      Each contribution adds valuable data that helps build a clearer picture of where and when different species are typically seen.
+      Each contribution adds valuable data that <strong>helps build a clearer picture of where and when</strong> different species are typically seen.
       </div>
 
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-      When divers share sightings collectively, trip planning becomes more reliable and predictable.
+      When divers share sightings collectively, <strong>trip planning becomes more reliable and predictable.</strong>
       </div>
 
       <div style={{ height: 20 }} />

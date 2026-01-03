@@ -10,13 +10,13 @@ export default function WhyPartner() {
       <div style={{ height: 20 }} /> 
 
       <div className={styles.faqAnswer}>
-      Upgrading to a Partner Account lets you feature your location on the Scuba SEAsons map and create listings for the trips you offer. This gives divers direct insight into where you operate and the experiences they can expect. 
+      Upgrading to a Partner Account lets you <strong>feature your location</strong> on the Scuba SEAsons map and <strong>create listings for the trips you offer.</strong> This gives divers direct insight into where you operate and the experiences they can expect. 
       </div>
 
       <div style={{ height: 20 }} /> 
 
       <div className={styles.faqAnswer}>
-      By highlighting the marine life in your area, including real sightings and seasonal patterns, you can attract more interest, increase awareness, and encourage divers to join your trips.
+      By <strong>highlighting the marine life in your area,</strong> including real sightings and seasonal patterns, you can attract more interest, increase awareness, and encourage divers to join your trips.
       </div>
     </div>
   );

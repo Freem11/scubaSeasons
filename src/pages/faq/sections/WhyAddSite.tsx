@@ -4,7 +4,7 @@ export default function WhyAddSite() {
   return (
     <div>
       <div className={styles.faqAnswer}>
-      Dive sites make it easier for divers to add sightings and help promote your local diving area.
+      Dive sites make it easier for divers to add sightings and help <strong>promote your local diving area.</strong>
       </div>
 
       <div style={{ height: 20 }} />
@@ -21,7 +21,7 @@ export default function WhyAddSite() {
       <div style={{ height: 20 }} />
 
       <div className={styles.faqAnswer}>
-      Over time, this builds a clear and reliable picture of the marine life in your area and helps show other divers why your region is worth visiting.
+      Over time, this builds a clear and reliable picture of the marine life in your area and helps show other divers <strong>why your region is worth visiting.</strong>
       </div>
 
     </div>

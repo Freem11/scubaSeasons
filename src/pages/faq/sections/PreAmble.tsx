@@ -4,7 +4,7 @@ export default function Preamble() {
   return (
     <div>
       <div className={styles.faqAnswer}>
-      Scuba SEAsons is a global platform that helps divers discover marine life, explore dive sites, and connect with the diving community.
+      Scuba SEAsons is a <strong>global platform</strong> that helps divers discover marine life, explore dive sites, and connect with the diving community.
       </div>
 
       <div style={{ height: 20 }} />
