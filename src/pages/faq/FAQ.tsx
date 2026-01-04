@@ -42,7 +42,7 @@ export default function FAQ() {
         answer: <AddPhoto />
       },
       {
-        question: "Why should I add reveiws to dive sites in Scuba Seasons?",
+        question: "Why should I add reviews to dive sites in Scuba Seasons?",
         answer: <WhyAddSiteReview />
       },
       {
