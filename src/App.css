@@ -17,6 +17,14 @@
   object-position: center;
 }
 
+
+.brevoContent {
+  width: 100vw;
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
 .sectionContent {
   display: flex;
   flex-direction: column;

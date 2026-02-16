@@ -1,3 +1,4 @@
+import { BrevoSignup } from "../components/brevo/brevoSignup";
 import Hero from "../components/hero";
 import Section from "../components/section";
 
@@ -5,7 +6,9 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <div className={'spacer'}></div>
+      <div className={'brevoContent'}>
+      <BrevoSignup/>
+      </div>
       <Section>
         <div className={'twoCol'}>
           <img
