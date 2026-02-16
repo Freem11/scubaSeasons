@@ -6,9 +6,13 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <div className={'brevoContent'}>
-      <BrevoSignup/>
+      
+      {/* Brevo Section */}
+      <div className={'brevoContent'} style={{ padding: '40px 20px' }}>
+        <BrevoSignup />
       </div>
+      
+      {/* Sea Life Section */}
       <Section>
         <div className={'twoCol'}>
           <img
@@ -28,6 +32,8 @@ export default function Home() {
           </div>
         </div>
       </Section>
+
+      {/* Community Section */}
       <Section>
         <div className={'twoCol'}>
           <div className={'sectionContent'}>
@@ -48,6 +54,8 @@ export default function Home() {
           />
         </div>
       </Section>
+
+      {/* Log Section */}
       <Section>
         <div className={'twoCol'}>
           <img
@@ -68,7 +76,8 @@ export default function Home() {
           </div>
         </div>
       </Section>
+      
       <div className={'spacer'}></div>
     </main>
-  )
+  );
 }
