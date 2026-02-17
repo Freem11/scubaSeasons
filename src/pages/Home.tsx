@@ -8,7 +8,7 @@ export default function Home() {
       <Hero />
       
       {/* Brevo Section */}
-      <div className={'brevoContent'} style={{ padding: '40px 20px' }}>
+      <div className={'brevoContent'}>
         <BrevoSignup />
       </div>
       

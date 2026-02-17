@@ -7,123 +7,107 @@ export const BrevoSignup = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
-
-    // We use the exact endpoint and fields from your Brevo form
     const formData = new FormData();
     formData.append('EMAIL', email);
     formData.append('locale', 'en');
     formData.append('email_address_check', '');
 
     try {
-      // Direct POST to Brevo's server bypasses their broken main.js script
       await fetch("https://deb5a9c4.sibforms.com/serve/MUIFAK5k3d207_8g1GbnQJQB3sWFVU7FcBs4ut6QDrpu3L-WdxX5o34w4bLiDYJjYmCwhIUbApN8AsrxLzXNSeCmxdDAIuAYd-xFbnVRm24d8_yxdA_m9yqCvk5nvujxnSztA31nex6ECB1tnvPqbyra5amwDDoZ2bdPKN_SLgm4VIAjyUjbk1I7aLU4pzEaLP6feiDnbQOP8tZFIQ==", {
         method: 'POST',
         body: formData,
-        mode: 'no-cors', // Essential: Brevo doesn't return CORS headers
+        mode: 'no-cors',
       });
-
-      // If we are here, the request was dispatched successfully
       setStatus('success');
-      setEmail(''); // This officially clears your input field
+      setEmail('');
     } catch (err) {
-      console.error("Brevo submission error:", err);
       setStatus('error');
     }
   };
 
   return (
-    <div className="sib-form" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-      <div id="sib-form-container">
-        
-        {/* SUCCESS MESSAGE */}
-        {status === 'success' && (
-          <div 
-            style={{ 
-              padding: '12px', 
-              marginBottom: '15px', 
-              backgroundColor: '#e7faf0', 
-              color: '#085229', 
-              border: '1px solid #13ce66', 
-              borderRadius: '4px', 
-              fontFamily: 'sans-serif',
-              textAlign: 'left'
-            }}
-          >
-            Your subscription has been successful.
+    <div className="brevo-wrapper" style={{ width: '100%', overflowX: 'hidden' }}>
+      {/* Dynamic Style Tag for Media Queries */}
+      <style>{`
+        .brevo-container {
+          width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+        .brevo-input {
+          width: 100% !important;
+          box-sizing: border-box !important;
+          padding: 14px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          font-size: 16px;
+        }
+        .brevo-button {
+          width: 100%;
+          padding: 14px;
+          border-radius: 10px;
+          border: none;
+          background-color: #1e70fe;
+          color: white;
+          font-weight: 700;
+          cursor: pointer;
+        }
+        /* Mobile adjustment for screens under 700px */
+        @media (min-width: 700px) {
+          .brevo-button {
+            width: auto;
+            min-width: 180px;
+          }
+        }
+      `}</style>
+
+      <div className="brevo-container">
+        {/* Status Messages */}
+        {status === 'success' && <div style={{...msgStyle, backgroundColor: '#e7faf0', color: '#085229'}}>Success! Check your email.</div>}
+        {status === 'error' && <div style={{...msgStyle, backgroundColor: '#ffeded', color: '#661d1d'}}>Error. Please try again.</div>}
+
+        <form onSubmit={handleSubmit} style={{ width: '100%' }}>
+          <h2 style={{ fontSize: 'clamp(20px, 6vw, 28px)', color: '#1e70fe', marginBottom: '10px', fontFamily: 'sans-serif' }}>
+            Building the Ultimate Seasonal Dive Guide.
+          </h2>
+          
+          <p style={{ color: '#706b6b', marginBottom: '20px', fontFamily: 'sans-serif' }}>
+            Join our mailing list for progress updates!
+          </p>
+
+          <div style={{ marginBottom: '15px', width: '100%' }}>
+            <input 
+              className="brevo-input"
+              type="email" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email Address" 
+              required 
+            />
           </div>
-        )}
 
-        {/* ERROR MESSAGE */}
-        {status === 'error' && (
-          <div 
-            style={{ 
-              padding: '12px', 
-              marginBottom: '15px', 
-              backgroundColor: '#ffeded', 
-              color: '#661d1d', 
-              border: '1px solid #ff4949', 
-              borderRadius: '4px', 
-              fontFamily: 'sans-serif',
-              textAlign: 'left'
-            }}
-          >
-            Your subscription could not be saved. Please try again.
+          <div style={{ textAlign: 'right' }}>
+            <button 
+              type="submit"
+              className="brevo-button"
+              disabled={status === 'loading'}
+              style={{ backgroundColor: status === 'loading' ? '#ccc' : '#1e70fe' }}
+            >
+              {status === 'loading' ? 'Joining...' : 'Join us'}
+            </button>
           </div>
-        )}
-
-        <div id="sib-container" style={{ textAlign: 'center', backgroundColor: 'transparent', width: '100%' }}>
-          <form onSubmit={handleSubmit}>
-            
-            <div style={{ padding: '8px 0', textAlign: 'left' }}>
-              <h2 style={{ fontSize: '29px', fontWeight: 700, color: '#1e70fe', margin: 0, fontFamily: 'sans-serif' }}>
-                Building the Ultimate Seasonal Dive Guide.
-              </h2>
-            </div>
-            
-            <div style={{ padding: '8px 0', textAlign: 'left', color: '#706b6b', fontFamily: 'sans-serif' }}>
-              Join our mailing list for progress updates and seasonal scuba insights!
-            </div>
-
-            <div style={{ padding: '8px 0' }}>
-              <input 
-                type="email" 
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email Address" 
-                required 
-                disabled={status === 'loading'}
-                style={{ 
-                  width: '100%', 
-                  boxSizing: 'border-box', 
-                  padding: '12px', 
-                  border: '1px solid #ccc', 
-                  borderRadius: '4px',
-                  fontSize: '16px'
-                }} 
-              />
-            </div>
-
-            <div style={{ padding: '16px 0', textAlign: 'right' }}>
-              <button 
-                type="submit"
-                disabled={status === 'loading'}
-                style={{ 
-                  fontSize: '20px', 
-                  fontWeight: 700, 
-                  color: '#FFFFFF', 
-                  backgroundColor: status === 'loading' ? '#ccc' : '#1e70fe', 
-                  borderRadius: '10px', 
-                  padding: '12px 24px', 
-                  cursor: status === 'loading' ? 'default' : 'pointer', 
-                  border: 'none' 
-                }}
-              >
-                {status === 'loading' ? 'Joining...' : 'Join us'}
-              </button>
-            </div>
-          </form>
-        </div>
+        </form>
       </div>
     </div>
   );
+};
+
+const msgStyle = {
+  padding: '12px',
+  marginBottom: '15px',
+  borderRadius: '8px',
+  fontFamily: 'sans-serif',
+  fontSize: '14px'
 };
