@@ -1,3 +1,14 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* Stops the horizontal wiggle */
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box; /* Crucial: includes padding/border in the width */
+}
+
 .spacer {
   height: 4rem;
   width: 100%;
@@ -19,7 +30,7 @@
 
 
 .brevoContent {
-  width: 100vw;
+  width: 100%;
   gap: 1rem;
   display: flex;
   justify-content: center;
