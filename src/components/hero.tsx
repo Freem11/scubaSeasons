@@ -14,14 +14,13 @@ export default function Hero() {
         <div className={styles.heroContent}>
           <div className={styles.heroHeading}>
             <h1>
-              Discover <TextCircle>where</TextCircle> and{" "}
-              <TextUnderline>when</TextUnderline> you can dive with any sea
-              creature.
+              <TextUnderline>Every</TextUnderline> dive has a story
             </h1>
             <p>
-              Join a community of divers across the globe sharing their favorite
-              dive spots and the best times to visit.
+              Scuba Seasons creates the most complete digital record of your dive by combining your dive computer, underwater photos, marine life, dive conditions and memories into one beautiful Dive Story.
             </p>
+ <p><strong>Any</strong> camera • <strong>Any</strong> dive computer</p>
+            
           </div>
           <div className={styles.heroCTAs}>
             <DownloadBadge store="apple" />
