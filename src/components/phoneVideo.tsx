@@ -13,13 +13,13 @@ export default function PhoneVideo() {
 >
   {/* The Safari/iOS version */}
   <source 
-    src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Phones.mov'} 
+    src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/phones2.mov'} 
     type='video/mp4; codecs="hvc1"' 
   />
   
   {/* The Chrome/Android version */}
   <source 
-    src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Phones.webm'} 
+    src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/phones2.webm'} 
     type="video/webm" 
   />
 </video>

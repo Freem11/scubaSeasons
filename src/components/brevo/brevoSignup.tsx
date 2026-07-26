@@ -70,7 +70,7 @@ export const BrevoSignup = () => {
 
         <form onSubmit={handleSubmit} style={{ width: '100%' }}>
           <h2 style={{ fontSize: 'clamp(20px, 6vw, 28px)', color: '#1e70fe', marginBottom: '10px', fontFamily: 'sans-serif' }}>
-            Building the ultimate way to tell the story of your dives.
+            Building the ultimate way to tell the story of your dives
           </h2>
           
           <p style={{ color: '#706b6b', marginBottom: '20px', fontFamily: 'sans-serif' }}>

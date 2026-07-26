@@ -24,7 +24,7 @@ const STEPS_DATA = [
   {
     title: "Before your first dive",
     subtitle: "Step 1",
-    desc: "Photograph your Scuba Seasons Sync Card.",
+    desc: "Photograph your Scuba Seasons Sync Card",
     imgSrcs: [QREarly],
     altText: "Mobile screen showing raw dive computer file import progress bar"
   },
@@ -38,7 +38,7 @@ const STEPS_DATA = [
   {
     title: "After your final dive",
     subtitle: "Step 3",
-    desc: "Photograph the Sync Card again.",
+    desc: "Photograph the Sync Card again",
     hasPopover: true,
     imgSrcs: [QRLate],
     altText: "Phone screen displaying visual timeline pairing photo timestamps to depth peaks"
@@ -46,20 +46,19 @@ const STEPS_DATA = [
   {
     title: "Create your Dive Story",
     subtitle: "Step 4",
-    desc: "Upload your photos and dive logs. Scuba Seasons helps you synchronize your photos, identify marine life and record dive conditions to create your Dive Story.",
+    desc: "Upload your photos and dive logs. Scuba Seasons helps you synchronize your photos, identify marine life and record dive conditions to create your Dive Story",
     imgSrcs: [Story1, Story2, Story3, Story4, Story5, Story6],
     altText: "Mobile screen tagging a turtle photo with details"
   },
   {
     title: "Your Dive Story is ready",
     subtitle: "Step 5",
-    desc: "Review your completed Dive Story, then share it with friends or keep it as part of your personal dive journal.",
+    desc: "Review your completed Dive Story, then share it with friends or keep it as part of your personal dive journal",
     imgSrcs: [StoryShare1, StoryShare2],
     altText: "Finished interactive dive story mockup ready for export"
   }
 ];
 
-// FIX 1: Moved Component Declarations outside of Home to maintain stable references
 function Sequence({ children }) {
   return <div style={styles.sequenceContainer}>{children}</div>;
 }
@@ -256,7 +255,7 @@ export default function Home() {
           <div className={'sectionContent'} style={{alignItems: 'center'}}>
             <h2>The Result?</h2>
             <div>
-              <p>The most complete record of every dive you've ever made.</p>
+              <p>The most complete record of every dive you've ever made</p>
             </div>
           </div>
       </Section>
@@ -266,13 +265,14 @@ export default function Home() {
         <div className={'twoCol'}>
           <img
             src={DiveStoryLarge}
+            style={styles.responsiveImageLarge}
             alt={'Scuba SEAsons sea life map.'}
             className={'image'}
           />
           <div className={'sectionContent'}>
-            <h2>One dive. Everything together.</h2>
+            <h2>One dive • Everything together</h2>
             <div>
-              <p>Stop juggling dive logs, camera folders and scattered memories.</p>
+              <p>Stop juggling dive logs, camera folders and scattered memories</p>
               <p>Scuba Seasons brings everything together into one complete Dive Story:</p>
               <ul style={{ listStyleType: 'none', paddingLeft: '1.5rem', margin: '1rem 0' }}>
                 <li style={{ marginBottom: '0.5rem' }}>✓ Dive computer data</li>
@@ -290,10 +290,10 @@ export default function Home() {
       <Section>
         <div className={'twoCol'}>
           <div className={'sectionContent'}>
-            <h2>Sync any camera with any dive computer.</h2>
+            <h2>Sync any camera with any dive computer</h2>
             <div>
-              <p>Photograph two Scuba Seasons Sync Cards—one before your first dive and one after your last.</p>
-              <p>We'll automatically correct your camera clock, calculate clock drift and synchronize every underwater photo with its exact dive, time and depth.</p>
+              <p>Photograph two Scuba Seasons Sync Cards—one before your first dive and one after your last</p>
+              <p>We'll automatically correct your camera clock, calculate clock drift and synchronize every underwater photo with its exact dive, time and depth</p>
               
               <p style={{marginTop:15}}>
                 <strong>Any camera • </strong>
@@ -309,6 +309,7 @@ export default function Home() {
           </div>
           <img
             src={Gear}
+            style={styles.responsiveImage}
             alt={'Scuba SEAsons forms to add new sea creatures and dive sites.'}
             className={'image'}
           />
@@ -320,13 +321,14 @@ export default function Home() {
         <div className={'twoCol'}>
           <img
             src={StoryScreens}
+            style={styles.responsiveImage}
             alt={'Scuba SEAsons user profile.'}
             className={'image userProfileImage'}
           />
           <div className={'sectionContent'}>
-            <h2>Every underwater photo becomes part of your dive.</h2>
+            <h2>Every underwater photo becomes part of your dive</h2>
             <div>
-              <p>Instantly see where each photo fits on your dive profile, exactly when it was taken, how deep you were and what marine life you encountered.</p>
+              <p>Instantly see where each photo fits on your dive profile, exactly when it was taken, how deep you were and what marine life you encountered</p>
               <ul style={{ listStyleType: 'none', paddingLeft: '1.5rem', margin: '1rem 0' }}>
                 <li style={{ marginBottom: '0.5rem' }}>✓ Exact dive</li>
                 <li style={{ marginBottom: '0.5rem' }}>✓ Exact timestamp</li>
@@ -349,8 +351,8 @@ export default function Home() {
             <button style={styles.popoverCloseBtn} onClick={() => setShowSyncCardPopover(false)}>×</button>
             <h4 style={styles.popoverTitle}>Why do I need two Sync Cards?</h4>
             <div style={styles.popoverBody}>
-              <p style={{ margin: '0 0 0.5rem 0' }}>Camera clocks slowly drift throughout the day.</p>
-              <p style={{ margin: '0 0 0.5rem 0' }}>By photographing a Sync Card before your first dive and after your last,</p>
+              <p style={{ margin: '0 0 0.5rem 0' }}>Camera clocks slowly drift throughout the day</p>
+              <p style={{ margin: '0 0 0.5rem 0' }}>By photographing a Sync Card before your first dive and after your last</p>
               <p style={{ margin: 0 }}>Scuba Seasons accurately calculates your camera's clock drift and accounts for it when syncing your photos, for down to the SECOND and to the CENTIMETER accuracy!</p>
             </div>
           </div>
@@ -361,7 +363,7 @@ export default function Home() {
         <div style={styles.popoverOverlay} onClick={() => setShowBrandPopover(false)}>
           <div style={styles.popoverCard} onClick={(e) => e.stopPropagation()}>
             <button style={styles.popoverCloseBtn} onClick={() => setShowBrandPopover(false)}>×</button>
-            <h4 style={styles.popoverTitle}>Supported Dive Computers</h4>
+            <h4 style={styles.popoverTitle}>Currently Supported Dive Computers & Auths</h4>
             <div style={styles.popoverBody}>
               <div className={'twoCol'} style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem' }}>
                 <div style={{ flex: 1 }}>
@@ -391,6 +393,19 @@ export default function Home() {
 }
 
 const styles = {
+  responsiveImage: {
+    maxWidth: '100%',
+    height: 'auto',
+    objectFit: 'contain',
+      margin: '0 auto',
+  },
+  responsiveImageLarge: {
+    maxWidth: '100%',
+    width: '400px',
+    height: 'auto',
+    objectFit: 'contain',
+    margin: '0 auto',
+  },
   sequenceContainer: {
     display: 'flex',
     flexDirection: 'column',

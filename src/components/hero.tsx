@@ -17,7 +17,7 @@ export default function Hero() {
               <TextUnderline>Every</TextUnderline> dive has a story
             </h1>
             <p>
-              Scuba Seasons creates the most complete digital record of your dive by combining your dive computer, underwater photos, marine life, dive conditions and memories into one beautiful Dive Story.
+              Scuba Seasons creates the most complete digital record of your dive by combining your dive computer, underwater photos, marine life, dive conditions and memories into one beautiful Dive Story
             </p>
  <p><strong>Any</strong> camera • <strong>Any</strong> dive computer</p>
             
