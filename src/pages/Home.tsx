@@ -24,7 +24,7 @@ const STEPS_DATA = [
   {
     title: "Before your first dive",
     subtitle: "Step 1",
-    desc: "Photograph your Scuba Seasons Sync Card",
+    desc: "Photograph your Scuba Seasons Sync Card with your dive camera",
     imgSrcs: [QREarly],
     altText: "Mobile screen showing raw dive computer file import progress bar"
   },
