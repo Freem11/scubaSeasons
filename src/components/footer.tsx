@@ -16,7 +16,7 @@ export default function Footer() {
           <div className={styles.footerTop}>
             <div className={styles.footerBlock}>
               <Logo />
-              <p>
+              {/* <p>
                 Scuba SEAsons is also available on the web.{" "}
                 <a
                   className={styles.textLink}
@@ -26,7 +26,7 @@ export default function Footer() {
                   Create an account
                 </a>{" "}
                 to get started.
-              </p>
+              </p> */}
               <p>
                 {'Got questions? Check out our '}
                 <Link to={'/faq'} className={styles.textLink}>
@@ -74,7 +74,7 @@ export default function Footer() {
             </div>
           </div>
           <div className={styles.footerBottom}>
-            <div>© 2025 Scuba SEAsons. All rights reserved.</div>
+            <div>© 2026 Scuba SEAsons. All rights reserved.</div>
           </div>
         </div>
       </div>

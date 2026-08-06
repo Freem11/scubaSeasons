@@ -14,7 +14,7 @@ export default function Navbar() {
       </Link>
 
         <nav className={styles.navbarLinks}>
-          {isDesktop && (
+          {/* {isDesktop && (
             <a
               href="https://scubaseasons.netlify.app"
               className="button button-primary button-small"
@@ -22,7 +22,7 @@ export default function Navbar() {
             >
               {"Join now"}
             </a>
-          )}
+          )} */}
           <Link to={"/faq"} className="button button-outline button-small">
             {"FAQ"}
           </Link>
