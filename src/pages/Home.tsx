@@ -1,38 +1,30 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, ReactNode, CSSProperties } from "react";
 import { BrevoSignup } from "../components/brevo/brevoSignup";
 import Hero from "../components/hero";
 import Section from "../components/section";
-import QREarly from "../../src/assets/QR1.png"
-import QRLate from "../../src/assets/QR2.png"
-import DivePhoto1 from "../../src/assets/DivePhoto1.jpg"
-import DivePhoto2 from "../../src/assets/DivePhoto2.jpg"
-import DivePhoto3 from "../../src/assets/DivePhoto3.jpg"
-import Story1 from "../../src/assets/Story1.png"
-import Story2 from "../../src/assets/Story2.png"
-import Story3 from "../../src/assets/Story3.png"
-import Story4 from "../../src/assets/Story4.png"
-import Story5 from "../../src/assets/Story5.png"
-import Story6 from "../../src/assets/Story6.png"
-import StoryShare1 from "../../src/assets/StoryShare1.jpeg"
-import StoryShare2 from "../../src/assets/StoryShare2.jpeg"
 
-import DiveStoryLarge from "../../src/assets/DiveStoryLarge.png"
-import Gear from "../../src/assets/Gear.png"
-import StoryScreens from "../../src/assets/StoryScreen.png"
+interface StepData {
+  title: string;
+  subtitle: string;
+  desc: string;
+  hasPopover?: boolean;
+  imgSrcs: string[];
+  altText: string;
+}
 
-const STEPS_DATA = [
+const STEPS_DATA: StepData[] = [
   {
     title: "Before your first dive",
     subtitle: "Step 1",
     desc: "Photograph your Scuba Seasons Sync Card with your dive camera",
-    imgSrcs: [QREarly],
+    imgSrcs: ['https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/QR1.png'],
     altText: "Mobile screen showing raw dive computer file import progress bar"
   },
   {
     title: "Enjoy your dives",
     subtitle: "Step 2",
     desc: "Take photos normally with your camera",
-    imgSrcs: [DivePhoto1, DivePhoto2, DivePhoto3],
+    imgSrcs: ['https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/DivePhoto1.jpg', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/DivePhoto2.jpg', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/DivePhoto3.jpg',],
     altText: "Mobile screen showing local image gallery selection grid"
   },
   {
@@ -40,30 +32,42 @@ const STEPS_DATA = [
     subtitle: "Step 3",
     desc: "Photograph the Sync Card again",
     hasPopover: true,
-    imgSrcs: [QRLate],
+    imgSrcs: ['https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Qr2.png'],
     altText: "Phone screen displaying visual timeline pairing photo timestamps to depth peaks"
   },
   {
     title: "Create your Dive Story",
     subtitle: "Step 4",
     desc: "Upload your photos and dive logs. Scuba Seasons helps you synchronize your photos, identify marine life and record dive conditions to create your Dive Story",
-    imgSrcs: [Story1, Story2, Story3, Story4, Story5, Story6],
+    imgSrcs: ['https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Story1.png', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Story2.png', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Story3.png', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Story4.png', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Story5.png', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Story6.png',],
     altText: "Mobile screen tagging a turtle photo with details"
   },
   {
     title: "Your Dive Story is ready",
     subtitle: "Step 5",
     desc: "Review your completed Dive Story, then share it with friends or keep it as part of your personal dive journal",
-    imgSrcs: [StoryShare1, StoryShare2],
+    imgSrcs: ['https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/StoryShare1.jpeg', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/StoryShare2.jpeg'],
     altText: "Finished interactive dive story mockup ready for export"
   }
 ];
 
-function Sequence({ children }) {
+interface SequenceProps {
+  children: ReactNode;
+}
+
+function Sequence({ children }: SequenceProps) {
   return <div style={styles.sequenceContainer}>{children}</div>;
 }
 
-function Step({ subtitle, isLast, index, isMobile, children }) {
+interface StepProps {
+  subtitle: string;
+  isLast: boolean;
+  index: number;
+  isMobile: boolean;
+  children: ReactNode;
+}
+
+function Step({ subtitle, isLast, index, isMobile, children }: StepProps) {
   const isImageLeft = index % 2 !== 0;
   return (
     <div style={styles.stepWrapper}>
@@ -85,10 +89,10 @@ function Step({ subtitle, isLast, index, isMobile, children }) {
 }
 
 export default function Home() {
-  const [showSyncCardPopover, setShowSyncCardPopover] = useState(false);
-  const [showBrandPopover, setShowBrandPopover] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [carouselIndices, setCarouselIndices] = useState({});
+  const [showSyncCardPopover, setShowSyncCardPopover] = useState<boolean>(false);
+  const [showBrandPopover, setShowBrandPopover] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [carouselIndices, setCarouselIndices] = useState<Record<number, number>>({});
 
   useEffect(() => {
     const handleResize = () => {
@@ -116,14 +120,14 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  const nextSlide = (stepIndex, maxImages) => {
+  const nextSlide = (stepIndex: number, maxImages: number) => {
     setCarouselIndices((prev) => ({
       ...prev,
       [stepIndex]: ((prev[stepIndex] || 0) + 1) % maxImages,
     }));
   };
 
-  const prevSlide = (stepIndex, maxImages) => {
+  const prevSlide = (stepIndex: number, maxImages: number) => {
     setCarouselIndices((prev) => ({
       ...prev,
       [stepIndex]: ((prev[stepIndex] || 0) - 1 + maxImages) % maxImages,
@@ -264,7 +268,7 @@ export default function Home() {
       <Section>
         <div className={'twoCol'}>
           <img
-            src={DiveStoryLarge}
+            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/DiveStoryLarge.png'}
             style={styles.responsiveImageLarge}
             alt={'Scuba SEAsons sea life map.'}
             className={'image'}
@@ -308,7 +312,7 @@ export default function Home() {
             </div>
           </div>
           <img
-            src={Gear}
+            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Gear.png'}
             style={styles.responsiveImage}
             alt={'Scuba SEAsons forms to add new sea creatures and dive sites.'}
             className={'image'}
@@ -320,7 +324,7 @@ export default function Home() {
       <Section>
         <div className={'twoCol'}>
           <img
-            src={StoryScreens}
+            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/StoryScreen.png'}
             style={styles.responsiveImage}
             alt={'Scuba SEAsons user profile.'}
             className={'image userProfileImage'}
@@ -392,12 +396,12 @@ export default function Home() {
   );
 }
 
-const styles = {
+const styles: Record<string, CSSProperties> = {
   responsiveImage: {
     maxWidth: '100%',
     height: 'auto',
     objectFit: 'contain',
-      margin: '0 auto',
+    margin: '0 auto',
   },
   responsiveImageLarge: {
     maxWidth: '100%',

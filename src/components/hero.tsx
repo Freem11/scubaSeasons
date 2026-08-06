@@ -4,7 +4,6 @@ import WavyBlock from "./wavyBlock";
 import "../App.css";
 import PhoneVideo from "./phoneVideo";
 import DownloadBadge from "./downloadBadge";
-import TextCircle from "./textDecoration/textCircle";
 import TextUnderline from "./textDecoration/textUnderline";
 
 export default function Hero() {
