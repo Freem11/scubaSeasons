@@ -23,6 +23,11 @@ export default function Navbar() {
               {"Join now"}
             </a>
           )} */}
+          
+          <Link to={"/support"} className="button button-outline button-small">
+            {"Support"}
+          </Link>
+
           <Link to={"/faq"} className="button button-outline button-small">
             {"FAQ"}
           </Link>

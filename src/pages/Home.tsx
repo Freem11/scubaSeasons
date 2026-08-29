@@ -3,6 +3,9 @@ import { BrevoSignup } from "../components/brevo/brevoSignup";
 import Hero from "../components/hero";
 import Section from "../components/section";
 
+import SuuntoLogoImage from '../assets/SuuntoLogo.png';
+import { Link } from "react-router-dom";
+
 interface StepData {
   title: string;
   subtitle: string;
@@ -347,6 +350,27 @@ export default function Home() {
         </div>
       </Section>
       
+    {/* Partner Section */}
+      <Section>
+        <div className={'sectionContent'} style={{alignItems: 'center'}}>
+        <h1>Our Partners</h1>
+        <h4 style={{marginBottom:"4em"}}>Click to see how we work with them</h4>
+        </div>
+
+        <div style={{display:"flex", justifyContent:"center"}}>
+          <Link to="/Suunto">
+          <img
+            src={SuuntoLogoImage}
+            style={styles.responsiveImageLogo}
+            alt={'Scuba SEAsons user profile.'}
+            className={'image'}
+          />
+       </Link>
+        </div>
+      </Section>
+      
+
+
       <div className={'spacer'}></div>
 
       {showSyncCardPopover && (
@@ -406,6 +430,13 @@ const styles: Record<string, CSSProperties> = {
   responsiveImageLarge: {
     maxWidth: '100%',
     width: '400px',
+    height: 'auto',
+    objectFit: 'contain',
+    margin: '0 auto',
+  },
+    responsiveImageLogo: {
+    maxWidth: '100%',
+    width: '250px',
     height: 'auto',
     objectFit: 'contain',
     margin: '0 auto',
