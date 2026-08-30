@@ -2,8 +2,6 @@ import { useState, useEffect, ReactNode, CSSProperties } from "react";
 import { BrevoSignup } from "../components/brevo/brevoSignup";
 import Hero from "../components/hero";
 import Section from "../components/section";
-
-import SuuntoLogoImage from '../assets/SuuntoLogo.png';
 import { Link } from "react-router-dom";
 
 interface StepData {
