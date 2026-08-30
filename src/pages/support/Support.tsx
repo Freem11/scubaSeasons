@@ -76,6 +76,21 @@ export default function Support() {
     return matchesSearch && matchesCategory;
   });
 
+  const supportSubject = encodeURIComponent("Scuba Seasons Support Request (Web)");
+
+  const supportBody = encodeURIComponent(
+  `Hi Scuba Seasons Support,
+
+  [ Please describe your issue or feedback below ]
+
+
+
+  ---
+  - App Version (Found in app Settings): 
+  - OS (Android or iOS): 
+  `
+  );
+
   return (
     <>
       <div className={styles.headerBackground} />
@@ -225,7 +240,10 @@ export default function Support() {
               <ul style={{ listStyleType: "none", paddingLeft: 0, margin: "1.5rem 0" }}>
                 <li style={{ marginBottom: "0.75rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
                   ✉️ <strong>Email:</strong>{" "}
-                  <a href="mailto:scubaseasons@gmail.com" style={{ color: "#0073e6", textDecoration: "underline" }}>
+                    <a 
+                    href={`mailto:scubaseasons@gmail.com?subject=${supportSubject}&body=${supportBody}`} 
+                    style={{ color: "#0073e6", textDecoration: "underline" }}
+                  >
                     scubaseasons@gmail.com
                   </a>
                 </li>
