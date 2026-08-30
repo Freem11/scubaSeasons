@@ -1,7 +1,5 @@
 import { CSSProperties, ReactNode, useEffect, useState } from "react";
 import Section from "../../components/section.tsx";
-// styles from "./Suunto.module.css";
-
 
 interface StepData {
   title: string;
@@ -11,28 +9,53 @@ interface StepData {
   imgSrcs: string[];
   altText: string;
 }
+
 const STEPS_DATA: StepData[] = [
   {
-    title: "Before your first dive",
+    title: "Open 'Contribute' in the App",
     subtitle: "Step 1",
-    desc: "Photograph your Scuba Seasons Sync Card with your dive camera",
-    imgSrcs: ['https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto1a.png','https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto1b.png'],
-    altText: "Mobile screen showing raw dive computer file import progress bar"
+    desc: "Open 'Contribute' then 'Link with your brand' in the app and select Suunto to initiate connection.",
+    imgSrcs: [
+      'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto1a.png',
+      'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto1b.png'
+    ],
+    altText: "Mobile app screen displaying the Suunto connection card"
   },
   {
-    title: "Enjoy your dives",
+    title: "Authorize Your Suunto Account",
     subtitle: "Step 2",
-    desc: "Take photos normally with your camera",
-    imgSrcs: ['https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto2a.png','https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto2b.png'],
-    altText: "Mobile screen showing local image gallery selection grid"
+    desc: "Enter your Suunto account credentials when prompted. Grant permission for our app to access your activity and dive data.",
+    imgSrcs: [
+      'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto2a.png',
+      'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto2b.png'
+    ],
+    altText: "Suunto OAuth login and account authorization screen"
   },
   {
-    title: "After your final dive",
+    title: "Sync Your Dives Automatically",
     subtitle: "Step 3",
-    desc: "Photograph the Sync Card again",
+    desc: "Once authorized, simply sync your dive computer (like the Suunto Ocean or EON Core) with the official Suunto mobile app as usual. You will then be able to import your dive logs to Scuba Seasons.",
     hasPopover: true,
-    imgSrcs: ['https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto3a.png','https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto3b.png'],
-    altText: "Phone screen displaying visual timeline pairing photo timestamps to depth peaks"
+    imgSrcs: [
+      'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto3a.png',
+      'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto3b.png'
+    ],
+    altText: "Confirmation screen showing successful Suunto integration and imported dive logs"
+  }
+];
+
+const FAQ_DATA = [
+  {
+    question: "Which Suunto devices are supported?",
+    answer: "Any Suunto dive computer or smartwatch that syncs with the official Suunto App—including the Suunto Ocean, EON Core, EON Steel, D5, and sports watches with dive capabilities."
+  },
+  {
+    question: "Will past dives be imported?",
+    answer: "Yes. Once connected, your historical dive logs saved in your Suunto Cloud account will sync during the initial import."
+  },
+  {
+    question: "How do I disconnect my account?",
+    answer: "You can revoke access at any time under Contribute > Link with your brand > Suunto Account within the app, or directly from your Suunto profile account management online."
   }
 ];
 
@@ -74,38 +97,36 @@ function Step({ subtitle, isLast, index, isMobile, children }: StepProps) {
 }
 
 export default function Suunto() {
-    const [carouselIndices, setCarouselIndices] = useState<Record<number, number>>({});
-    const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [carouselIndices, setCarouselIndices] = useState<Record<number, number>>({});
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
-      useEffect(() => {
-        const handleResize = () => {
-          setIsMobile(window.innerWidth <= 768);
-        };
-        handleResize(); 
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-      }, []);
-    
-      useEffect(() => {
-        const interval = setInterval(() => {
-          setCarouselIndices((prev) => {
-            const updated = { ...prev };
-            STEPS_DATA.forEach((step, index) => {
-              if (step.imgSrcs.length > 1) {
-                const currentIdx = prev[index] || 0;
-                updated[index] = (currentIdx + 1) % step.imgSrcs.length;
-              }
-            });
-            return updated;
-          });
-        }, 3000);
-    
-        return () => clearInterval(interval);
-      }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCarouselIndices((prev) => {
+        const updated = { ...prev };
+        STEPS_DATA.forEach((step, index) => {
+          if (step.imgSrcs.length > 1) {
+            const currentIdx = prev[index] || 0;
+            updated[index] = (currentIdx + 1) % step.imgSrcs.length;
+          }
+        });
+        return updated;
+      });
+    }, 3000);
 
+    return () => clearInterval(interval);
+  }, []);
 
-const nextSlide = (stepIndex: number, maxImages: number) => {
+  const nextSlide = (stepIndex: number, maxImages: number) => {
     setCarouselIndices((prev) => ({
       ...prev,
       [stepIndex]: ((prev[stepIndex] || 0) + 1) % maxImages,
@@ -119,86 +140,88 @@ const nextSlide = (stepIndex: number, maxImages: number) => {
     }));
   };
       
-  return(
-    
-      <>
-          <div className={styles.headerBackground}/>
+  return (
+    <>
+      <div style={styles.headerBackground}/>
 
-        <Section>
-          <div className={'twoCol'}>
-
-            <div className={'sectionContent'}>
-              <h1>Suunto Cloud Integration</h1>
-              <div>
-                <p>Connect your Suunto account to automatically import dive logs from your Suunto Dive Computer. Your depth profiles, bottom times, and underwater metrics sync seamlessly as soon as your device updates.</p>
-              </div>
-           
+      <Section>
+        <div className={'twoCol'}>
+          <div className={'sectionContent'}>
+            <h1>Suunto Cloud Integration</h1>
+            <div>
+              <p>Connect your Suunto account to automatically import dive logs from your Suunto Dive Computer. Your depth profiles, bottom times, and underwater metrics sync seamlessly as soon as your device updates.</p>
             </div>
           </div>
-        </Section>
-         <Section>
-                <div style={{ width: '100%' }}>
-                  <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Here's How It Works</h2>
-                  
-                  <Sequence>
-                    {STEPS_DATA.map((step, index) => {
-                      const currentActiveIdx = carouselIndices[index] || 0;
-                      const hasMultipleImages = step.imgSrcs.length > 1;
-        
-                      const textBlock = (
-                        <div key="text" className={'sectionContent'} style={styles.sectionContentOverride}>
-                          <span style={styles.cardSubtitle}>{step.subtitle}</span>
-                          <h3 style={styles.cardTitle}>{step.title}</h3>
-                          <div style={styles.descText}>
-                            
-                          </div>
-                        </div>
-                      );
-        
-                      const mockupBlock = (
-                        <div key="mockup" style={styles.mockupContainer}>
-                          <div style={styles.carouselWrapper}>
-                            <div style={styles.phoneFrame}>
-                              <div 
-                                style={{
-                                  ...styles.slideTrack,
-                                  width: `${step.imgSrcs.length * 100}%`,
-                                  transform: `translate3d(-${currentActiveIdx * (100 / step.imgSrcs.length)}%, 0px, 0px)`
-                                }}
-                              >
-                                {step.imgSrcs.map((src, imgIdx) => (
-                                  <div 
-                                    key={imgIdx} 
-                                    style={{ 
-                                      ...styles.slideItem, 
-                                      width: `${100 / step.imgSrcs.length}%` 
-                                    }}
-                                  >
-                                    <img 
-                                      src={src} 
-                                      alt={`${step.altText} - View ${imgIdx + 1}`} 
-                                      style={styles.screenshot} 
-                                    />
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                            {hasMultipleImages && (
-                              <div style={styles.dotsContainer}>
-                                {step.imgSrcs.map((_, dotIdx) => (
-                                  <div 
-                                    key={dotIdx}
-                                    style={{
-                                      ...styles.dotIndicator,
-                                      backgroundColor: currentActiveIdx === dotIdx ? '#0073e6' : '#cbd5e1'
-                                    }}
-                                  />
-                                ))}
-                              </div>
-                            )}
-        
 
-{hasMultipleImages && (
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <img
+              src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/SuuntoLogo.png'}
+              style={styles.responsiveImageLarge}
+              alt={'Suunto Logo'}
+              className={'image'}
+            />
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <div style={{ width: '100%' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Here's How It Works</h2>
+          
+          <Sequence>
+            {STEPS_DATA.map((step, index) => {
+              const currentActiveIdx = carouselIndices[index] || 0;
+              const hasMultipleImages = step.imgSrcs.length > 1;
+
+              const textBlock = (
+                <div key="text" className={'sectionContent'} style={styles.sectionContentOverride}>
+                  <span style={styles.cardSubtitle}>{step.subtitle}</span>
+                  <h3 style={styles.cardTitle}>{step.title}</h3>
+                  <p style={styles.descText}>
+                    {step.desc}
+                  </p>
+                </div>
+              );
+
+              const mockupBlock = (
+                <div key="mockup" style={styles.mockupContainer}>
+                  <div style={styles.carouselWrapper}>
+                    {hasMultipleImages && (
+                      <button 
+                        style={{ ...styles.carouselBtn, left: '-40px' }} 
+                        onClick={() => prevSlide(index, step.imgSrcs.length)}
+                      >
+                        ‹
+                      </button>
+                    )}
+
+                    <div style={styles.phoneFrame}>
+                      <div 
+                        style={{
+                          ...styles.slideTrack,
+                          width: `${step.imgSrcs.length * 100}%`,
+                          transform: `translate3d(-${currentActiveIdx * (100 / step.imgSrcs.length)}%, 0px, 0px)`
+                        }}
+                      >
+                        {step.imgSrcs.map((src, imgIdx) => (
+                          <div 
+                            key={imgIdx} 
+                            style={{ 
+                              ...styles.slideItem, 
+                              width: `${100 / step.imgSrcs.length}%` 
+                            }}
+                          >
+                            <img 
+                              src={src} 
+                              alt={`${step.altText} - View ${imgIdx + 1}`} 
+                              style={styles.screenshot} 
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {hasMultipleImages && (
                       <button 
                         style={{ ...styles.carouselBtn, right: '-40px' }} 
                         onClick={() => nextSlide(index, step.imgSrcs.length)}
@@ -220,41 +243,51 @@ const nextSlide = (stepIndex: number, maxImages: number) => {
                         ))}
                       </div>
                     )}
-                          </div>
-                        </div>
-
-
-
-                      );
-        
-
-                      
-                      const elementOrder = isMobile ? [mockupBlock, textBlock] : [textBlock, mockupBlock];
-        
-                      return (
-                        <Step 
-                          key={index} 
-                          index={index}
-                          subtitle={step.subtitle}
-                          isMobile={isMobile}
-                          isLast={index === STEPS_DATA.length - 1}
-                        >
-                          {elementOrder}
-                        </Step>
-                      );
-                    })}
-                  </Sequence>
+                  </div>
                 </div>
-              </Section>
-        
+              );
 
+              const elementOrder = isMobile ? [mockupBlock, textBlock] : [textBlock, mockupBlock];
 
-        </>
-  )
+              return (
+                <Step 
+                  key={index} 
+                  index={index}
+                  subtitle={step.subtitle}
+                  isMobile={isMobile}
+                  isLast={index === STEPS_DATA.length - 1}
+                >
+                  {elementOrder}
+                </Step>
+              );
+            })}
+          </Sequence>
+        </div>
+      </Section>
+
+      {FAQ_DATA.map((faq, index) => (
+        <Section key={index}>
+          <div>
+            <div className={'sectionContent'}>
+              <h2>{faq.question}</h2>
+              <div>
+                <p>{faq.answer}</p>
+              </div>
+            </div>
+          </div>
+        </Section>
+      ))}
+    </>
+  );
 }
 
-
 const styles: Record<string, CSSProperties> = {
+  headerBackground: {
+    backgroundColor: '#0173e6',
+    width: '100%',
+    height: '82px',
+    marginBottom: '40px',
+  },
   responsiveImage: {
     maxWidth: '100%',
     height: 'auto',
@@ -268,7 +301,7 @@ const styles: Record<string, CSSProperties> = {
     objectFit: 'contain',
     margin: '0 auto',
   },
-    responsiveImageLogo: {
+  responsiveImageLogo: {
     maxWidth: '100%',
     width: '250px',
     height: 'auto',

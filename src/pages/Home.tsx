@@ -360,7 +360,7 @@ export default function Home() {
         <div style={{display:"flex", justifyContent:"center"}}>
           <Link to="/Suunto">
           <img
-            src={SuuntoLogoImage}
+            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/SuuntoLogo.png'}
             style={styles.responsiveImageLogo}
             alt={'Scuba SEAsons user profile.'}
             className={'image'}
