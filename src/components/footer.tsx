@@ -28,9 +28,9 @@ export default function Footer() {
                 to get started.
               </p> */}
               <p>
-                {'Got questions? Check out our '}
-                <Link to={'/faq'} className={styles.textLink}>
-                  {'FAQ'}
+                {'Got questions? Get '}
+                <Link to={'/support'} className={styles.textLink}>
+                  {'Support'}
                 </Link>
                 {'.'}
               </p>
