@@ -28,7 +28,6 @@ html, body {
   object-position: center;
 }
 
-
 .brevoContent {
   width: 100%;
   gap: 1rem;
@@ -47,7 +46,7 @@ html, body {
   margin-bottom: 0.5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .twoCol {
     grid-template-columns: 1fr;
     padding: 1rem;
@@ -59,6 +58,10 @@ html, body {
   }
   .spacer {
     height: 1rem;
+  }
+  .brevoContent {
+    order: -1; /* Moves content to the top inside flex containers */
+    margin-top: -8rem; /* Pulls content visually upward */
   }
 }
 
