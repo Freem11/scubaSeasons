@@ -424,7 +424,7 @@ const styles: Record<string, CSSProperties> = {
   },
   phoneFrame: {
     width: '180px',
-    height: '330px',
+    height: '370px',
     border: '8px solid #0f172a',
     borderRadius: '24px',
     overflow: 'hidden',
