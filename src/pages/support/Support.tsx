@@ -60,7 +60,7 @@ const FAQ_DATA: FAQItem[] = [
   {
     category: "Troubleshooting",
     question: "Having technical issues or sync errors?",
-    answer: "Please reach out directly to our support team at scubaseasons@gmail.com or via 'Profile > Settings > Report an Issue' in the app with your device type and app version, and we'll help get it sorted out.",
+    answer: "Please reach out directly to our support team at support@scubaseasons.com or via 'Profile > Settings > Report an Issue' in the app with your device type and app version, and we'll help get it sorted out.",
   },
 ];
 
@@ -241,7 +241,7 @@ export default function Support() {
                 <li style={{ marginBottom: "0.75rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
                   ✉️ <strong>Email:</strong>{" "}
                     <a 
-                    href={`mailto:scubaseasons@gmail.com?subject=${supportSubject}&body=${supportBody}`} 
+                    href={`mailto:support@scubaseasons.com?subject=${supportSubject}&body=${supportBody}`} 
                     style={{ color: "#0073e6", textDecoration: "underline" }}
                   >
                     scubaseasons@gmail.com
