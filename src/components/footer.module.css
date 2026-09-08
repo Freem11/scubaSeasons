@@ -57,7 +57,7 @@
 
 .footerBottom {
   padding: 1rem;
-  border-top: rgba(255, 255, 255, 0.5) solid 1px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,11 +83,11 @@
 }
 
 .socialLink {
-  transition: 200ms ease all;
+  transition: transform 200ms ease;
 }
 
 .socialLink:hover {
-  scale: 1.05;
+  transform: scale(1.05);
 }
 
 .socialLink > svg {

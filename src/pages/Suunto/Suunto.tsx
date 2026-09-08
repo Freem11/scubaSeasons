@@ -1,8 +1,5 @@
-import { useState, useEffect, ReactNode, CSSProperties } from "react";
-import { BrevoSignup } from "../components/brevo/brevoSignup";
-import Hero from "../components/hero";
-import Section from "../components/section";
-import { Link } from "react-router-dom";
+import { CSSProperties, ReactNode, useEffect, useState } from "react";
+import Section from "../../components/section.tsx";
 
 interface StepData {
   title: string;
@@ -15,40 +12,50 @@ interface StepData {
 
 const STEPS_DATA: StepData[] = [
   {
-    title: "Before your first dive",
+    title: "Open 'Contribute' in the App",
     subtitle: "Step 1",
-    desc: "Photograph your Scuba Seasons Sync Card with your dive camera",
-    imgSrcs: ['https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/QR1.png'],
-    altText: "Mobile screen showing raw dive computer file import progress bar"
+    desc: "Open 'Contribute' then 'Link with your brand' in the app and select Suunto to initiate connection.",
+    imgSrcs: [
+      'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto1a.png',
+      'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto1b.png'
+    ],
+    altText: "Mobile app screen displaying the Suunto connection card"
   },
   {
-    title: "Enjoy your dives",
+    title: "Authorize Your Suunto Account",
     subtitle: "Step 2",
-    desc: "Take photos normally with your camera",
-    imgSrcs: ['https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/DivePhoto1.jpg', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/DivePhoto2.jpg', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/DivePhoto3.jpg',],
-    altText: "Mobile screen showing local image gallery selection grid"
+    desc: "Enter your Suunto account credentials when prompted. Grant permission for our app to access your activity and dive data.",
+    imgSrcs: [
+      'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto2a.png',
+      'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto2b.png'
+    ],
+    altText: "Suunto OAuth login and account authorization screen"
   },
   {
-    title: "After your final dive",
+    title: "Sync Your Dives Automatically",
     subtitle: "Step 3",
-    desc: "Photograph the Sync Card again",
+    desc: "Once authorized, simply sync your dive computer (like the Suunto Ocean or EON Core) with the official Suunto mobile app as usual. You will then be able to import your dive logs to Scuba Seasons.",
     hasPopover: true,
-    imgSrcs: ['https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Qr2.png'],
-    altText: "Phone screen displaying visual timeline pairing photo timestamps to depth peaks"
+    imgSrcs: [
+      'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto3a.png',
+      'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/suunto3b.png'
+    ],
+    altText: "Confirmation screen showing successful Suunto integration and imported dive logs"
+  }
+];
+
+const FAQ_DATA = [
+  {
+    question: "Which Suunto devices are supported?",
+    answer: "Any Suunto dive computer or smartwatch that syncs with the official Suunto App—including the Suunto Ocean, EON Core, EON Steel, D5, and sports watches with dive capabilities."
   },
   {
-    title: "Create your Dive Story",
-    subtitle: "Step 4",
-    desc: "Upload your photos and dive logs. Scuba Seasons helps you synchronize your photos, identify marine life and record dive conditions to create your Dive Story",
-    imgSrcs: ['https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Story1.png', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Story2.png', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Story3.png', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Story4.png', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Story5.png', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Story6.png',],
-    altText: "Mobile screen tagging a turtle photo with details"
+    question: "Will past dives be imported?",
+    answer: "Yes. Once connected, your historical dive logs saved in your Suunto Cloud account will sync during the initial import."
   },
   {
-    title: "Your Dive Story is ready",
-    subtitle: "Step 5",
-    desc: "Review your completed Dive Story, then share it with friends or keep it as part of your personal dive journal",
-    imgSrcs: ['https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/StoryShare1.jpeg', 'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/StoryShare2.jpeg'],
-    altText: "Finished interactive dive story mockup ready for export"
+    question: "How do I disconnect my account?",
+    answer: "You can revoke access at any time under Contribute > Link with your brand > Suunto Account within the app, or directly from your Suunto profile account management online."
   }
 ];
 
@@ -89,11 +96,9 @@ function Step({ subtitle, isLast, index, isMobile, children }: StepProps) {
   );
 }
 
-export default function Home() {
-  const [showSyncCardPopover, setShowSyncCardPopover] = useState<boolean>(false);
-  const [showBrandPopover, setShowBrandPopover] = useState<boolean>(false);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
+export default function Suunto() {
   const [carouselIndices, setCarouselIndices] = useState<Record<number, number>>({});
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -134,18 +139,34 @@ export default function Home() {
       [stepIndex]: ((prev[stepIndex] || 0) - 1 + maxImages) % maxImages,
     }));
   };
-
-  return (
-    <main style={{ position: 'relative' }}>
-      <Hero />
       
-      <div className={'brevoContent'}>
-        <BrevoSignup />
-      </div>
+  return (
+    <>
+      <div style={styles.headerBackground}/>
+
+      <Section>
+        <div className={'twoCol'}>
+          <div className={'sectionContent'}>
+            <h1>Suunto Cloud Integration</h1>
+            <div>
+              <p>Connect your Suunto account to automatically import dive logs from your Suunto Dive Computer. Your depth profiles, bottom times, and underwater metrics sync seamlessly as soon as your device updates.</p>
+            </div>
+          </div>
+
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <img
+              src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/SuuntoLogo.png'}
+              style={styles.responsiveImageLarge}
+              alt={'Suunto Logo'}
+              className={'image'}
+            />
+          </div>
+        </div>
+      </Section>
 
       <Section>
         <div style={{ width: '100%' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>It only takes two extra photos</h2>
+          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Here's How It Works</h2>
           
           <Sequence>
             {STEPS_DATA.map((step, index) => {
@@ -156,25 +177,15 @@ export default function Home() {
                 <div key="text" className={'sectionContent'} style={styles.sectionContentOverride}>
                   <span style={styles.cardSubtitle}>{step.subtitle}</span>
                   <h3 style={styles.cardTitle}>{step.title}</h3>
-                  <div style={styles.descText}>
-                    {step.hasPopover ? (
-                      <>
-                        {step.desc}{" "}
-                        <span style={styles.popoverLink} onClick={() => setShowSyncCardPopover(true)}>
-                          Why two Sync Cards?
-                        </span>
-                      </>
-                    ) : (
-                      step.desc
-                    )}
-                  </div>
+                  <p style={styles.descText}>
+                    {step.desc}
+                  </p>
                 </div>
               );
 
               const mockupBlock = (
                 <div key="mockup" style={styles.mockupContainer}>
                   <div style={styles.carouselWrapper}>
-                    
                     {hasMultipleImages && (
                       <button 
                         style={{ ...styles.carouselBtn, left: '-40px' }} 
@@ -232,7 +243,6 @@ export default function Home() {
                         ))}
                       </div>
                     )}
-
                   </div>
                 </div>
               );
@@ -255,170 +265,29 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Result Section */}
-      <Section>
-          <div className={'sectionContent'} style={{alignItems: 'center'}}>
-            <h2>The Result?</h2>
-            <div>
-              <p>The most complete record of every dive you've ever made</p>
-            </div>
-          </div>
-      </Section>
-
-      {/* Sea Life Section */}
-      <Section>
-        <div className={'twoCol'}>
-          <img
-            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/DiveStoryLarge.png'}
-            style={styles.responsiveImageLarge}
-            alt={'Scuba SEAsons sea life map.'}
-            className={'image'}
-          />
-          <div className={'sectionContent'}>
-            <h2>One dive • Everything together</h2>
-            <div>
-              <p>Stop juggling dive logs, camera folders and scattered memories</p>
-              <p>Scuba Seasons brings everything together into one complete Dive Story:</p>
-              <ul style={{ listStyleType: 'none', paddingLeft: '1.5rem', margin: '1rem 0' }}>
-                <li style={{ marginBottom: '0.5rem' }}>✓ Dive computer data</li>
-                <li style={{ marginBottom: '0.5rem' }}>✓ Underwater photos</li>
-                <li style={{ marginBottom: '0.5rem' }}>✓ Sea life sightings</li>
-                <li style={{ marginBottom: '0.5rem' }}>✓ Dive conditions</li>
-                <li style={{ marginBottom: '0.5rem' }}>✓ Personal notes</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* Community Section */}
-      <Section>
-        <div className={'twoCol'}>
-          <div className={'sectionContent'}>
-            <h2>Sync any camera with any dive computer</h2>
-            <div>
-              <p>Photograph two Scuba Seasons Sync Cards—one before your first dive and one after your last</p>
-              <p>We'll automatically correct your camera clock, calculate clock drift and synchronize every underwater photo with its exact dive, time and depth</p>
-              
-              <p style={{marginTop:15}}>
-                <strong>Any camera • </strong>
-                <strong 
-                  style={styles.inlineHeaderLink} 
-                  onClick={() => setShowBrandPopover(true)}
-                >
-                  Any dive computer
-                </strong>
-              </p>
-              <p><strong>Accurate time • Accurate depth</strong></p>
-            </div>
-          </div>
-          <img
-            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Gear.png'}
-            style={styles.responsiveImage}
-            alt={'Scuba SEAsons forms to add new sea creatures and dive sites.'}
-            className={'image'}
-          />
-        </div>
-      </Section>
-
-      {/* Log Section */}
-      <Section>
-        <div className={'twoCol'}>
-          <img
-            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/StoryScreen.png'}
-            style={styles.responsiveImage}
-            alt={'Scuba SEAsons user profile.'}
-            className={'image userProfileImage'}
-          />
-          <div className={'sectionContent'}>
-            <h2>Every underwater photo becomes part of your dive</h2>
-            <div>
-              <p>Instantly see where each photo fits on your dive profile, exactly when it was taken, how deep you were and what marine life you encountered</p>
-              <ul style={{ listStyleType: 'none', paddingLeft: '1.5rem', margin: '1rem 0' }}>
-                <li style={{ marginBottom: '0.5rem' }}>✓ Exact dive</li>
-                <li style={{ marginBottom: '0.5rem' }}>✓ Exact timestamp</li>
-                <li style={{ marginBottom: '0.5rem' }}>✓ Exact depth</li>
-                <li style={{ marginBottom: '0.5rem' }}>✓ Dive site</li>
-                <li style={{ marginBottom: '0.5rem' }}>✓ Marine life</li>
-                <li style={{ marginBottom: '0.5rem' }}>✓ Dive conditions</li>
-                <li style={{ marginBottom: '0.5rem' }}>✓ Position on your dive profile</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </Section>
-      
-    {/* Partner Section */}
-      <Section>
-        <div className={'sectionContent'} style={{alignItems: 'center'}}>
-        <h1>Our Partners</h1>
-        <h4 style={{marginBottom:"4em"}}>Click to see how we work with them</h4>
-        </div>
-
-        <div style={{display:"flex", justifyContent:"center"}}>
-          <Link to="/Suunto">
-          <img
-            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/SuuntoLogo.png'}
-            style={styles.responsiveImageLogo}
-            alt={'Scuba SEAsons user profile.'}
-            className={'image'}
-          />
-       </Link>
-        </div>
-      </Section>
-      
-
-
-      <div className={'spacer'}></div>
-
-      {showSyncCardPopover && (
-        <div style={styles.popoverOverlay} onClick={() => setShowSyncCardPopover(false)}>
-          <div style={styles.popoverCard} onClick={(e) => e.stopPropagation()}>
-            <button style={styles.popoverCloseBtn} onClick={() => setShowSyncCardPopover(false)}>×</button>
-            <h4 style={styles.popoverTitle}>Why do I need two Sync Cards?</h4>
-            <div style={styles.popoverBody}>
-              <p style={{ margin: '0 0 0.5rem 0' }}>Camera clocks slowly drift throughout the day</p>
-              <p style={{ margin: '0 0 0.5rem 0' }}>By photographing a Sync Card before your first dive and after your last</p>
-              <p style={{ margin: 0 }}>Scuba Seasons accurately calculates your camera's clock drift and accounts for it when syncing your photos, for down to the SECOND and to the CENTIMETER accuracy!</p>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {showBrandPopover && (
-        <div style={styles.popoverOverlay} onClick={() => setShowBrandPopover(false)}>
-          <div style={styles.popoverCard} onClick={(e) => e.stopPropagation()}>
-            <button style={styles.popoverCloseBtn} onClick={() => setShowBrandPopover(false)}>×</button>
-            <h4 style={styles.popoverTitle}>Currently Supported Dive Computers & Auths</h4>
-            <div style={styles.popoverBody}>
-              <div className={'twoCol'} style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem' }}>
-                <div style={{ flex: 1 }}>
-                  <h4 style={{ margin: '0 0 0.5rem 0' }}>Bluetooth</h4>
-                  <ul style={styles.brandList}>
-                    <li>Suunto (EON, D-Series, Vyper)</li>
-                    <li>Shearwater (Teric, Perdix, Peregrine, Petrel)</li>
-                    <li>Aqualung (I-Series)</li>
-                  </ul>
-                </div>
-                <div style={{ flex: 1 }}>
-                  <h4 style={{ margin: '0 0 0.5rem 0' }}>OAuth Connection</h4>
-                  <ul style={styles.brandList}>
-                    <li>Suunto</li>
-                  </ul>
-                </div>
+      {FAQ_DATA.map((faq, index) => (
+        <Section key={index}>
+          <div>
+            <div className={'sectionContent'}>
+              <h2>{faq.question}</h2>
+              <div>
+                <p>{faq.answer}</p>
               </div>
-              <p style={{ marginTop: '1.5rem', fontSize: '0.85rem', color: '#64748b', fontStyle: 'italic' }}> 
-                Don't see your computer listed? Contact us at scubaseasons@gmail.com to help us test and add support for it!
-              </p>
             </div>
           </div>
-        </div>
-      )}
-    </main>
+        </Section>
+      ))}
+    </>
   );
 }
 
 const styles: Record<string, CSSProperties> = {
+  headerBackground: {
+    backgroundColor: '#0173e6',
+    width: '100%',
+    height: '82px',
+    marginBottom: '40px',
+  },
   responsiveImage: {
     maxWidth: '100%',
     height: 'auto',
@@ -432,7 +301,7 @@ const styles: Record<string, CSSProperties> = {
     objectFit: 'contain',
     margin: '0 auto',
   },
-    responsiveImageLogo: {
+  responsiveImageLogo: {
     maxWidth: '100%',
     width: '250px',
     height: 'auto',
