@@ -244,7 +244,7 @@ export default function Support() {
                     href={`mailto:support@scubaseasons.com?subject=${supportSubject}&body=${supportBody}`} 
                     style={{ color: "#0073e6", textDecoration: "underline" }}
                   >
-                    scubaseasons@gmail.com
+                    support@scubaseasons.com
                   </a>
                 </li>
                 <li style={{ marginBottom: "0.75rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>

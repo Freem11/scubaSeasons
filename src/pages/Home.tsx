@@ -408,7 +408,7 @@ export default function Home() {
                 </div>
               </div>
               <p style={{ marginTop: '1.5rem', fontSize: '0.85rem', color: '#64748b', fontStyle: 'italic' }}> 
-                Don't see your computer listed? Contact us at scubaseasons@gmail.com to help us test and add support for it!
+                Don't see your computer listed? Contact us at support@scubaseasons.com to help us test and add support for it!
               </p>
             </div>
           </div>
