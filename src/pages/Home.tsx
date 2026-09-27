@@ -347,6 +347,40 @@ export default function Home() {
           </div>
         </div>
       </Section>
+
+           {/* Video Section */}
+      <Section>
+        <div className={'twoCol'}>
+          <div className={'sectionContent'}>
+            <h2>I Shoot Video, Can I still use this feature?</h2>
+            <div>
+              <p>Video Editors work differently from photo editors, when a vidoe file is produces it is ALWAYS treated as a new file, hence the metadata is lost.</p>
+              <p>However we have developed a tool, that will allow you to create photos from you vidoe file and it will preserve the meta data, then you can edit tha photo using a photo editor of your choice to do your psot production work.</p>
+              
+              <p style={{marginTop:15}}>
+                <strong>Any camera • </strong>
+                <strong 
+                  style={styles.inlineHeaderLink} 
+                  onClick={() => setShowBrandPopover(true)}
+                >
+                  Any dive computer
+                </strong>
+              </p>
+              <p><strong>Accurate time • Accurate depth</strong></p>
+            </div>
+          </div>
+               <div style={{display:"flex", justifyContent:"center"}}>
+          <Link to="/VideoConverter">
+          <img
+            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/Gear.png'}
+            style={styles.responsiveImage}
+            alt={'Scuba SEAsons forms to add new sea creatures and dive sites.'}
+            className={'image'}
+          />
+          </Link>
+           </div>
+        </div>
+      </Section>
       
     {/* Partner Section */}
       <Section>
