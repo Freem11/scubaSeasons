@@ -3,6 +3,8 @@ import { BrevoSignup } from "../components/brevo/brevoSignup";
 import Hero from "../components/hero";
 import Section from "../components/section";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import { isMobile as isMobileOS } from 'react-device-detect';
 
 interface StepData {
   title: string;
@@ -92,17 +94,11 @@ function Step({ subtitle, isLast, index, isMobile, children }: StepProps) {
 export default function Home() {
   const [showSyncCardPopover, setShowSyncCardPopover] = useState<boolean>(false);
   const [showBrandPopover, setShowBrandPopover] = useState<boolean>(false);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
   const [carouselIndices, setCarouselIndices] = useState<Record<number, number>>({});
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    handleResize(); 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    const isMobile = useMediaQuery({
+  query: "(max-width: 1024px), (hover: none), (pointer: coarse)",
+});
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -345,6 +341,47 @@ export default function Home() {
               </ul>
             </div>
           </div>
+        </div>
+      </Section>
+
+           {/* Video Section */}
+      <Section>
+        <div className={'twoCol'}>
+          <div className={'sectionContent'}>
+            <h2>Shooting Video? You Can Still Use This!</h2>
+            <div>
+              <p>When you edit and export video, hidden file information (metadata) is lost becase they create a completely new file.</p>
+              <p>Our tool lets you extract still photos from your video without losing any metadata. From there, simply edit the photo in your favorite app and you're good to go.</p>
+              
+              {!isMobileOS &&
+                  <p><strong>• Click the image to try the video tool!</strong></p>
+                  }
+              {isMobileOS &&
+                  <p><strong>• Available on Desktop Only</strong></p>
+                  }
+          
+            </div>
+          </div>
+               <div style={{display:"flex", justifyContent:"center"}}>
+        {!isMobileOS && (
+        <Link to="/VideoConverter">
+          <img
+            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/VideoConverter.png'}
+            style={styles.responsiveImage}
+            alt={'Extract metadata-preserved photos from video'}
+            className={'image'}
+          />
+        </Link>
+      )}
+      {isMobileOS && (
+          <img
+            src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/VideoConverter.png'}
+            style={styles.responsiveImage}
+            alt={'Extract metadata-preserved photos from video'}
+            className={'image'}
+          />
+      )}
+           </div>
         </div>
       </Section>
       

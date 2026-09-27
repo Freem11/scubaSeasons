@@ -13,7 +13,10 @@
     "cors": "^2.8.5",
     "firebase": "^11.3.1",
     "fs": "^0.0.1-security",
+    "mediainfo.js": "^0.3.8",
+    "piexifjs": "^1.0.6",
     "react": "^18.3.1",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18.3.1",
     "react-player": "^2.16.0",
     "react-responsive": "^10.0.0",
@@ -22,6 +25,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260108.0",
     "@eslint/js": "^9.15.0",
+    "@types/piexifjs": "^1.0.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@types/react-router-dom": "^5.3.3",
