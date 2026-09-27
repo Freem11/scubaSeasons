@@ -74,6 +74,11 @@ export default function Navbar() {
         </div>
       ) : (
         <nav className={styles.navbarLinks}>
+
+          <Link to="/VideoConverter" className="button button-outline button-small">
+            Video Converter
+          </Link>
+          
           <Link to="/support" className="button button-outline button-small">
             Support
           </Link>
