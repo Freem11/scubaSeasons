@@ -6,7 +6,9 @@ import styles from "./navbar.module.css";
 import "../../App.css";
 
 export default function Navbar() {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isMobile = useMediaQuery({
+  query: "(max-width: 1024px), (hover: none), (pointer: coarse)",
+});
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 

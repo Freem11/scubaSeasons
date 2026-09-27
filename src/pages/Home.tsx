@@ -93,17 +93,11 @@ function Step({ subtitle, isLast, index, isMobile, children }: StepProps) {
 export default function Home() {
   const [showSyncCardPopover, setShowSyncCardPopover] = useState<boolean>(false);
   const [showBrandPopover, setShowBrandPopover] = useState<boolean>(false);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
   const [carouselIndices, setCarouselIndices] = useState<Record<number, number>>({});
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    handleResize(); 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    const isMobile = useMediaQuery({
+  query: "(max-width: 1024px), (hover: none), (pointer: coarse)",
+});
 
   useEffect(() => {
     const interval = setInterval(() => {
