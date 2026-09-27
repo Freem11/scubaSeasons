@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import "./App.css";
 import Navbar from "./components/navbar/navbar.tsx";
 import Footer from "./components/footer";
@@ -8,7 +8,7 @@ import FAQ from "./pages/faq/FAQ.tsx";
 import Support from './pages/support/Support.tsx';
 import Suunto from './pages/Suunto/Suunto.tsx';
 import VideoSandbox from './pages/videoToPhoto/index.tsx';
-import { useMediaQuery } from 'react-responsive';
+import { isMobile } from 'react-device-detect';
 
 // Helper component that scrolls to top on route change
 function ScrollToTop() {
@@ -22,20 +22,25 @@ function ScrollToTop() {
 }
 
 function App() {
-    const isMobile = useMediaQuery({
-  query: "(max-width: 1024px), (hover: none), (pointer: coarse)",
-});
-
   return (
     <Router>
       <ScrollToTop />
       <Navbar />
       <Routes>
-        <Route path={'/'} element={<Home />} />
-        <Route path={'/faq'} element={<FAQ />} />
-        <Route path={'/support'} element={<Support />} />
-        <Route path={'/Suunto'} element={<Suunto />} />
-        <Route path={'/VideoConverter'} element={!isMobile ? <VideoSandbox /> : <Home />}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/Suunto" element={<Suunto />} />
+        <Route
+          path="/VideoConverter"
+          element={
+            isMobile ? (
+              <Navigate to="/" replace />
+            ) : (
+              <VideoSandbox />
+            )
+          }
+        />
       </Routes>
       <Footer />
     </Router>

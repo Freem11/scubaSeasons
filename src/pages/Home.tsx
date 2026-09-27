@@ -4,6 +4,7 @@ import Hero from "../components/hero";
 import Section from "../components/section";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+import { isMobile as isMobileOS } from 'react-device-detect';
 
 interface StepData {
   title: string;
@@ -352,17 +353,17 @@ export default function Home() {
               <p>When you edit and export video, hidden file information (metadata) is lost becase they create a completely new file.</p>
               <p>Our tool lets you extract still photos from your video without losing any metadata. From there, simply edit the photo in your favorite app and you're good to go.</p>
               
-              {!isMobile &&
+              {!isMobileOS &&
                   <p><strong>• Click the image to try the video tool!</strong></p>
                   }
-              {isMobile &&
+              {isMobileOS &&
                   <p><strong>• Available on Desktop Only</strong></p>
                   }
           
             </div>
           </div>
                <div style={{display:"flex", justifyContent:"center"}}>
-        {!isMobile && (
+        {!isMobileOS && (
         <Link to="/VideoConverter">
           <img
             src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/VideoConverter.png'}
@@ -372,7 +373,7 @@ export default function Home() {
           />
         </Link>
       )}
-      {isMobile && (
+      {isMobileOS && (
           <img
             src={'https://pub-9114df4c0fd044d0806a9e8819aa3212.r2.dev/VideoConverter.png'}
             style={styles.responsiveImage}
