@@ -8,6 +8,7 @@ import FAQ from "./pages/faq/FAQ.tsx";
 import Support from './pages/support/Support.tsx';
 import Suunto from './pages/Suunto/Suunto.tsx';
 import VideoSandbox from './pages/videoToPhoto/index.tsx';
+import { useMediaQuery } from 'react-responsive';
 
 // Helper component that scrolls to top on route change
 function ScrollToTop() {
@@ -21,6 +22,10 @@ function ScrollToTop() {
 }
 
 function App() {
+    const isMobile = useMediaQuery({
+  query: "(max-width: 1024px), (hover: none), (pointer: coarse)",
+});
+
   return (
     <Router>
       <ScrollToTop />
@@ -30,7 +35,7 @@ function App() {
         <Route path={'/faq'} element={<FAQ />} />
         <Route path={'/support'} element={<Support />} />
         <Route path={'/Suunto'} element={<Suunto />} />
-        <Route path={'/VideoConverter'} element={<VideoSandbox />}/>
+        <Route path={'/VideoConverter'} element={!isMobile ? <VideoSandbox /> : <Home />}/>
       </Routes>
       <Footer />
     </Router>
